@@ -58,6 +58,9 @@ namespace Task_70.Tests
 
             //Logout
             driver.FindElement(_locators.logOutLink).Click();
+
+            //Validate user logged out
+            Assert.IsNotNull(driver.FindElement(_locators.enterLink));
         }
 
         [TearDown]
