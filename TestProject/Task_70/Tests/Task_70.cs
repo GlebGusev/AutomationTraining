@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 
 namespace Task_70.Tests
@@ -11,7 +12,7 @@ namespace Task_70.Tests
     {
         private IWebDriver driver;
         private WebDriverWait _wait;
-        private Locators.Locators _locators;
+        private Locators.PageFactory _locators;
         private readonly Uri _startPage = new Uri("https://www.tut.by/");
         private readonly string _username = "seleniumtests@tut.by";
         private readonly string _password = "123456789zxcvbn";
@@ -21,7 +22,8 @@ namespace Task_70.Tests
         {
             driver = new ChromeDriver(chromeDriverDirectory: Initialize.Initialize.GetDriverFolder());
             driver.Manage().Window.Maximize();
-            _locators = new Locators.Locators();
+            _locators = PageFactory.InitElements<Locators.PageFactory>(driver);
+            
         }
 
         [Test]
@@ -31,23 +33,10 @@ namespace Task_70.Tests
             driver.Navigate().GoToUrl(_startPage);
 
             //Enter credentials
-            driver.FindElement(_locators.enterLink).Click();
-            
-            var userNameInput = driver.FindElement(_locators.userNameInput);
-            userNameInput.Clear();
-            userNameInput.SendKeys(_username);
-
-            var passwordInput = driver.FindElement(_locators.passwordInput);
-            passwordInput.Clear();
-            passwordInput.SendKeys(_password);
-
-            //Login
-            driver.FindElement(_locators.enterButton).Click();
+            _locators.PerformAutorization(_username, _password);
 
             //Validate user logged in
-            driver.FindElement(_locators.loggedInSpan).Click();
-
-            Assert.AreEqual("Личный кабинет", driver.FindElement(_locators.personalRoomText).Text);
+            _locators.AssertLoggedIn();
         }
 
         [Test]
@@ -57,10 +46,10 @@ namespace Task_70.Tests
             LoginTutBy_CorrectCredentials_Successfull();
 
             //Logout
-            driver.FindElement(_locators.logOutLink).Click();
+            _locators.ClickLogoutLink();
 
             //Validate user logged out
-            Assert.IsNotNull(driver.FindElement(_locators.enterLink));
+            _locators.AssertLoggedOut();
         }
 
         [TearDown]

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="3" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2019-02-08 15:59:44Z" end-time="2019-02-08 16:00:03Z" duration="19.023212">
+  <command-line><![CDATA[nunit3-console  C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Task_70.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1003" name="Task_70.dll" fullname="Task_70.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-08 15:59:45Z" end-time="2019-02-08 16:00:03Z" duration="18.269335" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="36056" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1004" name="Task_70" fullname="Task_70" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-08 15:59:45Z" end-time="2019-02-08 16:00:03Z" duration="18.253381" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+      <test-suite type="TestSuite" id="0-1005" name="Tests" fullname="Task_70.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-08 15:59:45Z" end-time="2019-02-08 16:00:03Z" duration="18.252999" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+        <test-suite type="TestFixture" id="0-1000" name="Task_70" fullname="Task_70.Tests.Task_70" classname="Task_70.Tests.Task_70" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-08 15:59:45Z" end-time="2019-02-08 16:00:03Z" duration="18.249384" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+          <test-case id="0-1001" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_70.Tests.Task_70.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="835623340" result="Passed" start-time="2019-02-08 15:59:45Z" end-time="2019-02-08 15:59:53Z" duration="8.686938" asserts="1" />
+          <test-case id="0-1002" name="LogoutTutBy_ClickLogoutLink_Successfull" fullname="Task_70.Tests.Task_70.LogoutTutBy_ClickLogoutLink_Successfull" methodname="LogoutTutBy_ClickLogoutLink_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1331196916" result="Passed" start-time="2019-02-08 15:59:53Z" end-time="2019-02-08 16:00:03Z" duration="9.533980" asserts="2" />
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

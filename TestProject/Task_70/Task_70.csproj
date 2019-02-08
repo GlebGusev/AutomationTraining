@@ -60,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Locators\Locators.cs" />
+    <Compile Include="Locators\PageFactory .cs" />
     <Compile Include="Tests\Task_70.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
