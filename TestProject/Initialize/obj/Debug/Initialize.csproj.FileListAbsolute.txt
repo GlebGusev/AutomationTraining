@@ -1,0 +1,6 @@
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Initialize.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Initialize.pdb
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\obj\Debug\Initialize.csprojResolveAssemblyReference.cache
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\obj\Debug\Initialize.csproj.CoreCompileInputs.cache
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\obj\Debug\Initialize.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\obj\Debug\Initialize.pdb

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -24,7 +23,7 @@ namespace Task_50.Tests
         public void TestSetup()
         {
             KillDriver();
-            driver = new ChromeDriver(chromeDriverDirectory: Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Drivers\"));
+            driver = new ChromeDriver(chromeDriverDirectory: Initialize.Initialize.GetDriverFolder());
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             driver.Manage().Window.Maximize();
             _locators = new Locators.TutByLocators();

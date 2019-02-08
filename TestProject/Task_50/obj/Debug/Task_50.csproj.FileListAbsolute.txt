@@ -18,4 +18,5 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\obj\Debug\Task
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\obj\Debug\Task_50.csproj.CoreCompileInputs.cache
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\obj\Debug\Task_50.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\obj\Debug\Task_50.pdb
-C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Drivers\chromedriver.exe
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Initialize.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Initialize.pdb

@@ -46,3 +46,5 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\obj\Debug\Task
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\obj\Debug\Task_20.csproj.CoreCompileInputs.cache
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\obj\Debug\Task_20.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\obj\Debug\Task_20.pdb
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Initialize.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Initialize.pdb

@@ -21,7 +21,7 @@ namespace Task_20.Tests
         [SetUp]
         public void TestSetup()
         {
-            driver = new ChromeDriver(chromeDriverDirectory: Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Drivers\"));
+            driver = new ChromeDriver(chromeDriverDirectory: Initialize.Initialize.GetDriverFolder());
             driver.Manage().Window.Maximize();
             _locators = new Locators.Locators();
         }

@@ -68,7 +68,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Drivers\chromedriver.exe" />
+    <ProjectReference Include="..\Initialize\Initialize.csproj">
+      <Project>{A322E642-F1B2-4851-B9E2-AF757D7ED850}</Project>
+      <Name>Initialize</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
