@@ -47,9 +47,6 @@ namespace Task_50.Tests
             passwordInput.Clear();
             passwordInput.SendKeys(_password);
 
-            //Assert forgot password link displays
-            Assert.True(driver.FindElement(_locators.forgotPasswordLink).Displayed, "Forgot password link is not displayed");
-
             //Login
             driver.FindElement(_locators.enterButton).Click();
 
@@ -79,9 +76,6 @@ namespace Task_50.Tests
             var passwordInput = driver.FindElement(_locators.passwordInput);
             passwordInput.Clear();
             passwordInput.SendKeys(password);
-
-            //Assert forgot password link displays
-            Assert.True(driver.FindElement(_locators.forgotPasswordLink).Displayed, "Forgot password link is not displayed");
 
             //Login
             driver.FindElement(_locators.enterButton).Click();
