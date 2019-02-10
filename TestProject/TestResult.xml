@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="16" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2019-02-10 23:04:02Z" end-time="2019-02-10 23:05:44Z" duration="101.853307">
+  <command-line><![CDATA[nunit3-console  C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple]]></command-line>
+  <test-suite type="Assembly" id="3-1002" name="Task_20.dll" fullname="Task_20.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-10 23:04:02Z" end-time="2019-02-10 23:04:13Z" duration="10.118645" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="ProcessModel" value="Multiple" />
+      <setting name="RunAsX86" value="True" />
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" />
+      <setting name="BasePath" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject" />
+      <setting name="RuntimeFramework" value="net-4.0" />
+      <setting name="DomainUsage" value="Default" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="36540" />
+      <property name="_APPDOMAIN" value="domain-f0452dfe-Task_20.dll" />
+    </properties>
+    <test-suite type="TestSuite" id="3-1003" name="Task_20" fullname="Task_20" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-10 23:04:03Z" end-time="2019-02-10 23:04:13Z" duration="10.107651" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <test-suite type="TestSuite" id="3-1004" name="Tests" fullname="Task_20.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-10 23:04:03Z" end-time="2019-02-10 23:04:13Z" duration="10.107366" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <test-suite type="TestFixture" id="3-1000" name="Task_20" fullname="Task_20.Tests.Task_20" classname="Task_20.Tests.Task_20" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-10 23:04:03Z" end-time="2019-02-10 23:04:13Z" duration="10.105290" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+          <test-case id="3-1001" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_20.Tests.Task_20.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_20.Tests.Task_20" runstate="Runnable" seed="465800649" result="Passed" start-time="2019-02-10 23:04:03Z" end-time="2019-02-10 23:04:13Z" duration="10.087821" asserts="2">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\LoginTutBy_CorrectCredentials_Successfull_02112019_020410.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+  <test-suite type="Assembly" id="4-1010" name="Task_50.dll" fullname="Task_50.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2019-02-10 23:04:13Z" end-time="2019-02-10 23:05:25Z" duration="71.906446" total="7" passed="7" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="ProcessModel" value="Multiple" />
+      <setting name="RunAsX86" value="True" />
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" />
+      <setting name="BasePath" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject" />
+      <setting name="RuntimeFramework" value="net-4.0" />
+      <setting name="DomainUsage" value="Default" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="36540" />
+      <property name="_APPDOMAIN" value="domain-ef2e2dfe-Task_50.dll" />
+    </properties>
+    <test-suite type="TestSuite" id="4-1011" name="Task_50" fullname="Task_50" runstate="Runnable" testcasecount="7" result="Passed" start-time="2019-02-10 23:04:13Z" end-time="2019-02-10 23:05:25Z" duration="71.895695" total="7" passed="7" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+      <test-suite type="TestSuite" id="4-1012" name="Tests" fullname="Task_50.Tests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2019-02-10 23:04:13Z" end-time="2019-02-10 23:05:25Z" duration="71.895454" total="7" passed="7" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+        <test-suite type="TestFixture" id="4-1000" name="Task_50_herokuapp" fullname="Task_50.Tests.Task_50_herokuapp" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" testcasecount="4" result="Passed" start-time="2019-02-10 23:04:13Z" end-time="2019-02-10 23:04:46Z" duration="33.661562" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="8">
+          <test-case id="4-1001" name="Herokuapp_AddTextToFrame_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added" methodname="Herokuapp_AddTextToFrame_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="856098528" result="Passed" start-time="2019-02-10 23:04:13Z" end-time="2019-02-10 23:04:29Z" duration="16.373932" asserts="2">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\Herokuapp_AddTextToFrame_Added_02112019_020429.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+          <test-case id="4-1002" name="Herokuapp_Alert_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Alert_Added" methodname="Herokuapp_Alert_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="1723290475" result="Passed" start-time="2019-02-10 23:04:29Z" end-time="2019-02-10 23:04:35Z" duration="5.660153" asserts="1">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\Herokuapp_Alert_Added_02112019_020435.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+          <test-case id="4-1003" name="Herokuapp_Confirm_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Confirm_Added" methodname="Herokuapp_Confirm_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="888736795" result="Passed" start-time="2019-02-10 23:04:35Z" end-time="2019-02-10 23:04:41Z" duration="5.740910" asserts="2">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\Herokuapp_Confirm_Added_02112019_020440.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+          <test-case id="4-1004" name="Herokuapp_Prompt_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Prompt_Added" methodname="Herokuapp_Prompt_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="1554498571" result="Passed" start-time="2019-02-10 23:04:41Z" end-time="2019-02-10 23:04:46Z" duration="5.869635" asserts="3">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\Herokuapp_Prompt_Added_02112019_020446.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="4-1005" name="Task_50_tutBy" fullname="Task_50.Tests.Task_50_tutBy" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" testcasecount="3" result="Passed" start-time="2019-02-10 23:04:46Z" end-time="2019-02-10 23:05:25Z" duration="38.230808" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+          <test-case id="4-1006" name="LoginTutBy_CorrectCredentialsAndWait_Successfull" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull" methodname="LoginTutBy_CorrectCredentialsAndWait_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="2097662213" result="Passed" start-time="2019-02-10 23:04:46Z" end-time="2019-02-10 23:04:59Z" duration="12.649636" asserts="1">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\LoginTutBy_CorrectCredentialsAndWait_Successfull_02112019_020453.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+          <test-suite type="ParameterizedMethod" id="4-1009" name="LoginTutBy_DDT_Successfull" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-10 23:04:59Z" end-time="2019-02-10 23:05:25Z" duration="25.580995" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+            <test-case id="4-1007" name="LoginTutBy_DDT_Successfull(&quot;seleniumtests@tut.by&quot;,&quot;123456789zxcvbn&quot;)" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(&quot;seleniumtests@tut.by&quot;,&quot;123456789zxcvbn&quot;)" methodname="LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1745697941" result="Passed" start-time="2019-02-10 23:04:59Z" end-time="2019-02-10 23:05:12Z" duration="13.170289" asserts="1">
+              <attachments>
+                <attachment>
+                  <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\LoginTutBy_DDT_Successfull___seleniumtests@tut.by___seleniumtests@tut.by_123456789zxcvbn_02112019_020506.png</filePath>
+                  <description><![CDATA[My Screenshot]]></description>
+                </attachment>
+              </attachments>
+            </test-case>
+            <test-case id="4-1008" name="LoginTutBy_DDT_Successfull(&quot;seleniumtests2@tut.by&quot;,&quot;123456789zxcvbn&quot;)" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(&quot;seleniumtests2@tut.by&quot;,&quot;123456789zxcvbn&quot;)" methodname="LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1871799522" result="Passed" start-time="2019-02-10 23:05:12Z" end-time="2019-02-10 23:05:25Z" duration="12.410404" asserts="1">
+              <attachments>
+                <attachment>
+                  <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\LoginTutBy_DDT_Successfull___seleniumtests2@tut.by___seleniumtests2@tut.by_123456789zxcvbn_02112019_020519.png</filePath>
+                  <description><![CDATA[My Screenshot]]></description>
+                </attachment>
+              </attachments>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+  <test-suite type="Assembly" id="5-1003" name="Task_70.dll" fullname="Task_70.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-10 23:05:25Z" end-time="2019-02-10 23:05:44Z" duration="18.982328" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="ProcessModel" value="Multiple" />
+      <setting name="RunAsX86" value="True" />
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" />
+      <setting name="BasePath" value="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject" />
+      <setting name="RuntimeFramework" value="net-4.0" />
+      <setting name="DomainUsage" value="Default" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="36540" />
+      <property name="_APPDOMAIN" value="domain-eee82dfe-Task_70.dll" />
+    </properties>
+    <test-suite type="TestSuite" id="5-1004" name="Task_70" fullname="Task_70" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-10 23:05:25Z" end-time="2019-02-10 23:05:44Z" duration="18.971389" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+      <test-suite type="TestSuite" id="5-1005" name="Tests" fullname="Task_70.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-10 23:05:25Z" end-time="2019-02-10 23:05:44Z" duration="18.971126" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+        <test-suite type="TestFixture" id="5-1000" name="Task_70" fullname="Task_70.Tests.Task_70" classname="Task_70.Tests.Task_70" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-10 23:05:25Z" end-time="2019-02-10 23:05:44Z" duration="18.969153" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+          <test-case id="5-1001" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_70.Tests.Task_70.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1854623221" result="Passed" start-time="2019-02-10 23:05:25Z" end-time="2019-02-10 23:05:35Z" duration="9.875500" asserts="1">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\LoginTutBy_CorrectCredentials_Successfull_02112019_020531.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+          <test-case id="5-1002" name="LogoutTutBy_ClickLogoutLink_Successfull" fullname="Task_70.Tests.Task_70.LogoutTutBy_ClickLogoutLink_Successfull" methodname="LogoutTutBy_ClickLogoutLink_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="37354233" result="Passed" start-time="2019-02-10 23:05:35Z" end-time="2019-02-10 23:05:44Z" duration="8.945640" asserts="2">
+            <attachments>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Screenshots\LogoutTutBy_ClickLogoutLink_Successfull_02112019_020541.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+            </attachments>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

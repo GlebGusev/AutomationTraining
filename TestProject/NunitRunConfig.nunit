@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NUnitProject>
+  <Settings activeconfig="Release" processModel="Multiple" domainUsage="Default" />
+  <Config name="Release" runtimeFramework="net-4.0" binpathtype="Manual">
+    <assembly path="Task_20/bin/Debug/Task_20.dll" />
+    <assembly path="Task_50/bin/Debug/Task_50.dll" />
+    <assembly path="Task_70/bin/Debug/Task_70.dll" />
+  </Config>
+</NUnitProject>

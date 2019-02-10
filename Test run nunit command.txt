@@ -1,0 +1,1 @@
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools>nunit3-console C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple

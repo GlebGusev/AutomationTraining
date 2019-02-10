@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Initialize
 {
@@ -21,6 +24,38 @@ namespace Initialize
             var solutionPath = TryGetSolutionDirectoryInfo().FullName;
 
             return Path.Combine(solutionPath, @"Drivers\");
+        }
+
+        public static void MakeScreenshot(IWebDriver driver)
+        {
+            var testArguments = TestContext.CurrentContext.Test.Arguments;
+            var argumentsString = string.Empty;
+
+            if (testArguments.Length > 0)
+            {
+                argumentsString = "_";
+                foreach (var argument in testArguments)
+                {
+                    argumentsString += argumentsString + "_" + argument;
+                }
+            }
+
+            var ss = ((ITakesScreenshot)driver).GetScreenshot();
+            var solutionPath = TryGetSolutionDirectoryInfo().FullName;
+            var screenshotFile = Path.Combine(solutionPath, @"Screenshots\"
+                , TestContext.CurrentContext.Test.MethodName + argumentsString + "_" + DateTime.Now.ToString("MMddyyyy_hhmmss") + ".png");
+            ss.SaveAsFile(screenshotFile, ScreenshotImageFormat.Png);
+
+            TestContext.AddTestAttachment(screenshotFile, "My Screenshot");
+        }
+
+        public static void LaunchBrowser(IWebDriver driver, Uri startPage)
+        {
+            driver.Navigate().GoToUrl(startPage);
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(condition => driver.Url.Contains(startPage.ToString()));
+
+            MakeScreenshot(driver);
         }
     }
 }

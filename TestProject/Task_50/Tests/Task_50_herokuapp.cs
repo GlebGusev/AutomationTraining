@@ -32,7 +32,7 @@ namespace Task_50.Tests
         public void Herokuapp_AddTextToFrame_Added()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPageFrame);
+            Initialize.Initialize.LaunchBrowser(driver, _startPageFrame);
 
             //FInd Frame and clear
             var frameWindow = driver.FindElement(_locators.frameWindow);
@@ -65,7 +65,7 @@ namespace Task_50.Tests
         public void Herokuapp_Alert_Added()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPageAlert);
+            Initialize.Initialize.LaunchBrowser(driver, _startPageAlert);
 
             //Accept Alert
             IsElementDisplayed(_locators.clickForJSAlertButton);
@@ -79,7 +79,7 @@ namespace Task_50.Tests
         public void Herokuapp_Confirm_Added()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPageAlert);
+            Initialize.Initialize.LaunchBrowser(driver, _startPageAlert);
 
             //Cancel Confirm
             IsElementDisplayed(_locators.clickForJSConfirmButton);
@@ -100,7 +100,7 @@ namespace Task_50.Tests
         public void Herokuapp_Prompt_Added()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPageAlert);
+            Initialize.Initialize.LaunchBrowser(driver, _startPageAlert);
 
             //Cancel Prompt
             IsElementDisplayed(_locators.clickForJSPromptButton);

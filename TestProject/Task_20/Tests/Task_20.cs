@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
-using System.IO;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 
 namespace Task_20.Tests
 {
@@ -12,7 +9,6 @@ namespace Task_20.Tests
     public class Task_20
     {
         private IWebDriver driver;
-        private WebDriverWait _wait;
         private Locators.Locators _locators;
         private readonly Uri _startPage = new Uri("https://www.tut.by/");
         private readonly string _username = "seleniumtests@tut.by";
@@ -30,7 +26,7 @@ namespace Task_20.Tests
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPage);
+            Initialize.Initialize.LaunchBrowser(driver, _startPage);
 
             //Enter credentials
             driver.FindElement(_locators.enterLink).Click();

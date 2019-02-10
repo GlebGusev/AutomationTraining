@@ -3,7 +3,6 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
 
 namespace Task_70.Tests
 {
@@ -11,7 +10,6 @@ namespace Task_70.Tests
     public class Task_70
     {
         private IWebDriver driver;
-        private WebDriverWait _wait;
         private Locators.PageFactory _locators;
         private readonly Uri _startPage = new Uri("https://www.tut.by/");
         private readonly string _username = "seleniumtests@tut.by";
@@ -23,14 +21,13 @@ namespace Task_70.Tests
             driver = new ChromeDriver(chromeDriverDirectory: Initialize.Initialize.GetDriverFolder());
             driver.Manage().Window.Maximize();
             _locators = PageFactory.InitElements<Locators.PageFactory>(driver);
-            
         }
 
         [Test]
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPage);
+            Initialize.Initialize.LaunchBrowser(driver, _startPage);
 
             //Enter credentials
             _locators.PerformAutorization(_username, _password);
@@ -52,7 +49,7 @@ namespace Task_70.Tests
             _locators.AssertLoggedOut();
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void TestCleanup()
         {
             driver.Quit();

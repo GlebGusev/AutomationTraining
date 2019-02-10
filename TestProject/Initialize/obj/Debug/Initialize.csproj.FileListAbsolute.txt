@@ -11,3 +11,5 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\n
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\nunit.framework.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\nunit.framework.pdb
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\nunit.framework.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\WebDriver.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\WebDriver.xml

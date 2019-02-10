@@ -11,8 +11,6 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Init
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\nunit.framework.dll
-C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\WebDriver.dll
-C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\WebDriver.Support.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Initialize.pdb
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
@@ -24,3 +22,5 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\obj\Debug\Task
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\obj\Debug\Task_70.csproj.CoreCompileInputs.cache
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\obj\Debug\Task_70.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\obj\Debug\Task_70.pdb
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\WebDriver.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\WebDriver.Support.dll

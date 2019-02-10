@@ -33,7 +33,7 @@ namespace Task_50.Tests
         public void LoginTutBy_CorrectCredentialsAndWait_Successfull()
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPage);
+            Initialize.Initialize.LaunchBrowser(driver, _startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
@@ -63,7 +63,7 @@ namespace Task_50.Tests
         public bool LoginTutBy_DDT_Successfull(string userName, string password)
         {
             //Open start page
-            driver.Navigate().GoToUrl(_startPage);
+            Initialize.Initialize.LaunchBrowser(driver, _startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
