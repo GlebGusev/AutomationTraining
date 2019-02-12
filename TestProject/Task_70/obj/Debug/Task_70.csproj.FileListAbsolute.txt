@@ -24,3 +24,11 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\obj\Debug\Task
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\obj\Debug\Task_70.pdb
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\WebDriver.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\WebDriver.Support.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Task_70.dll.config
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Allure.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Newtonsoft.Json.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\System.ValueTuple.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Initialize.dll.config
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\System.ValueTuple.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_70\bin\Debug\allureConfig.json

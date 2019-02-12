@@ -1,0 +1,66 @@
+{
+  "uuid": "4-1001_99cc54d562494b9d9b40f2f418e87c93-4-1000-run1-container",
+  "name": "Task_50.Tests.Task_50_herokuapp",
+  "children": [
+    "4-1001_99cc54d562494b9d9b40f2f418e87c93-4-1000-test-run1"
+  ],
+  "befores": [
+    {
+      "name": "TearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "TestSetup",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1550014487206,
+          "stop": 1550014487207
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1550014487205,
+      "stop": 1550014498311
+    }
+  ],
+  "afters": [
+    {
+      "name": "TestCleanup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "TestCleanup",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1550014498311,
+          "stop": 1550014498311
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1550014498311,
+      "stop": 1550014498316
+    }
+  ],
+  "links": [],
+  "start": 1550014487171,
+  "stop": 1550014498317
+}

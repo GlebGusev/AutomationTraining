@@ -1,60 +1,62 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
+using Allure.NUnit.Attributes;
+using Initialize;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
 namespace Task_50.Tests
 {
     [TestFixture]
-    public class Task_50_herokuapp
+    [AllureSuite("Task_50_hero tests")]
+    public class Task_50_herokuapp : TestBase
     {
-        private IWebDriver driver;
-        private WebDriverWait _wait;
         private Locators.HerokuappLocators _locators;
         private Uri _startPageAlert = new Uri("https://the-internet.herokuapp.com/javascript_alerts");
         private Uri _startPageFrame = new Uri("https://the-internet.herokuapp.com/iframe");
         private readonly string[] _textToEnter = {"Hello ","World!"};
 
         [SetUp]
-        public void TestSetup()
+        public override void TestSetup()
         {
-            KillDriver();
-            driver = new ChromeDriver(chromeDriverDirectory: Initialize.Initialize.GetDriverFolder());
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
-            driver.Manage().Window.Maximize();
+            base.TestSetup();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             _locators = new Locators.HerokuappLocators();
         }
 
         [Test]
+        [AllureTest]
+        [AllureSubSuite("FrameTests")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Minor)]
+        [AllureLink("4")]
+        [AllureOwner("Gleb")]
         public void Herokuapp_AddTextToFrame_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(driver, _startPageFrame);
+            Initialize.Initialize.LaunchBrowser(_driver, _startPageFrame);
 
             //FInd Frame and clear
-            var frameWindow = driver.FindElement(_locators.frameWindow);
-            driver.SwitchTo().Frame(frameWindow);
+            var frameWindow = _driver.FindElement(_locators.frameWindow);
+            _driver.SwitchTo().Frame(frameWindow);
 
-            var editArea = driver.FindElement(_locators.frameBody);
+            var editArea = _driver.FindElement(_locators.frameBody);
             editArea.Clear();
 
             //Enter text in Frame
             editArea.SendKeys(_textToEnter[0]);
 
-            driver.SwitchTo().DefaultContent();
-            driver.FindElement(_locators.boldButton).Click();
+            _driver.SwitchTo().DefaultContent();
+            _driver.FindElement(_locators.boldButton).Click();
 
-            driver.SwitchTo().Frame(frameWindow);
+            _driver.SwitchTo().Frame(frameWindow);
             editArea.SendKeys(_textToEnter[1]);
 
-            driver.SwitchTo().DefaultContent();
-            driver.FindElement(_locators.boldButton).Click();
+            _driver.SwitchTo().DefaultContent();
+            _driver.FindElement(_locators.boldButton).Click();
 
             //Validate text in Frame
-            driver.SwitchTo().Frame(frameWindow);
+            _driver.SwitchTo().Frame(frameWindow);
             var editorText = Regex.Replace(editArea.Text, @"[^\u0000-\u007F]+", string.Empty);
 
             Assert.AreEqual(_textToEnter[0] + _textToEnter[1], editorText);
@@ -62,108 +64,81 @@ namespace Task_50.Tests
         }
 
         [Test]
+        [AllureTest]
+        [AllureSubSuite("AlertTests")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Minor)]
+        [AllureLink("5")]
+        [AllureOwner("Gleb")]
         public void Herokuapp_Alert_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(driver, _startPageAlert);
+            Initialize.Initialize.LaunchBrowser(_driver, _startPageAlert);
 
             //Accept Alert
-            IsElementDisplayed(_locators.clickForJSAlertButton);
-            driver.FindElement(_locators.clickForJSAlertButton).Click();
-            driver.SwitchTo().Alert().Accept();
+            _locators.WaitForElementDisplayed(_driver, _locators.clickForJSAlertButton);
+            _driver.FindElement(_locators.clickForJSAlertButton).Click();
+            _driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You successfuly clicked an alert", driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You successfuly clicked an alert", _driver.FindElement(_locators.resultMessage).Text);
         }
 
         [Test]
+        [AllureTest]
+        [AllureSubSuite("AlertTests")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Minor)]
+        [AllureLink("5")]
+        [AllureOwner("Gleb")]
         public void Herokuapp_Confirm_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(driver, _startPageAlert);
+            Initialize.Initialize.LaunchBrowser(_driver, _startPageAlert);
 
             //Cancel Confirm
-            IsElementDisplayed(_locators.clickForJSConfirmButton);
-            var confirmButton = driver.FindElement(_locators.clickForJSConfirmButton);
+            _locators.WaitForElementDisplayed(_driver, _locators.clickForJSConfirmButton);
+            var confirmButton = _driver.FindElement(_locators.clickForJSConfirmButton);
             confirmButton.Click();
-            driver.SwitchTo().Alert().Dismiss();
+            _driver.SwitchTo().Alert().Dismiss();
 
-            Assert.AreEqual("You clicked: Cancel", driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You clicked: Cancel", _driver.FindElement(_locators.resultMessage).Text);
 
             //Accept Confirm
             confirmButton.Click();
-            driver.SwitchTo().Alert().Accept();
+            _driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You clicked: Ok", driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You clicked: Ok", _driver.FindElement(_locators.resultMessage).Text);
         }
 
         [Test]
+        [AllureTest]
+        [AllureSubSuite("AlertTests")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Minor)]
+        [AllureLink("5")]
+        [AllureOwner("Gleb")]
         public void Herokuapp_Prompt_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(driver, _startPageAlert);
+            Initialize.Initialize.LaunchBrowser(_driver, _startPageAlert);
 
             //Cancel Prompt
-            IsElementDisplayed(_locators.clickForJSPromptButton);
-            var promptButton = driver.FindElement(_locators.clickForJSPromptButton);
+            _locators.WaitForElementDisplayed(_driver, _locators.clickForJSPromptButton);
+            var promptButton = _driver.FindElement(_locators.clickForJSPromptButton);
             promptButton.Click();
-            driver.SwitchTo().Alert().Dismiss();
+            _driver.SwitchTo().Alert().Dismiss();
 
-            Assert.AreEqual("You entered: null", driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You entered: null", _driver.FindElement(_locators.resultMessage).Text);
 
             //Accept Prompt with no value
             promptButton.Click();
-            driver.SwitchTo().Alert().Accept();
+            _driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You entered:", driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You entered:", _driver.FindElement(_locators.resultMessage).Text);
 
             //Accept Prompt with no value
             promptButton.Click();
-            driver.SwitchTo().Alert().SendKeys("a");
-            driver.SwitchTo().Alert().Accept();
+            _driver.SwitchTo().Alert().SendKeys("a");
+            _driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You entered: a", driver.FindElement(_locators.resultMessage).Text);
-        }
-        
-        [TearDown]
-        public void TestCleanup()
-        {
-            driver.Quit();
-            KillDriver();
-        }
-
-        private void KillDriver()
-        {
-            var cromeDriver = Process.GetProcessesByName("chromedriver");
-            if (cromeDriver.Length > 0)
-            {
-                foreach (var driver in cromeDriver)
-                {
-                    driver.Kill();
-                }
-            }
-        }
-
-        private void IsElementDisplayed(By locator)
-        {
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            _wait.PollingInterval = TimeSpan.FromSeconds(1);
-            var elementDisplayed = _wait.Until(condition =>
-            {
-                try
-                {
-                    return driver.FindElement(locator).Enabled;
-                }
-                catch (NullReferenceException)
-                {
-                    return false;
-                }
-                catch (StaleElementReferenceException)
-                {
-                    return false;
-                }
-            });
-
-            if (!elementDisplayed) Assert.Fail("Element with is not found by locator: {0}", locator);
+            Assert.AreEqual("You entered: a", _driver.FindElement(_locators.resultMessage).Text);
         }
     }
 }

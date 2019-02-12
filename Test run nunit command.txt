@@ -1,1 +1,10 @@
-C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools>nunit3-console C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple
+cd C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools
+
+nunit3-console C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple
+
+--------------------------------------------------------------------------------------------
+
+cd C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\allure-commandline-2.9.0\allure-2.9.0\bin
+
+allure serve C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\FInalResult
+

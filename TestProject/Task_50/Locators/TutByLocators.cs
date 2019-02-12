@@ -1,8 +1,9 @@
-﻿using OpenQA.Selenium;
+﻿using Initialize;
+using OpenQA.Selenium;
 
 namespace Task_50.Locators
 {
-    public class TutByLocators
+    public class TutByLocators : MapBase
     {
         public By enterLink = By.XPath("//a[contains(text(),'Войти')]");
 

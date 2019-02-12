@@ -1,0 +1,39 @@
+{
+  "uuid": "4-1006_f04c5432791e48f1a11e5ff3e16928d7-4-1005-run1-container",
+  "name": "Task_50.Tests.Task_50_tutBy",
+  "children": [
+    "4-1006_f04c5432791e48f1a11e5ff3e16928d7-4-1005-test-run1"
+  ],
+  "befores": [
+    {
+      "name": "TestSetup",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "running",
+      "steps": [
+        {
+          "name": "TestSetup",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1549963792053,
+          "stop": 1549963792053
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1549963792053,
+      "stop": 0
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1549963792047,
+  "stop": 1549963800785
+}

@@ -1,0 +1,74 @@
+{
+  "uuid": "4-1008_ed1ca4fd62304c0d9881784e2efb0bd8-4-1005-test-run1",
+  "historyId": "Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(\"seleniumtests2@tut.by\",\"123456789zxcvbn\") (\"seleniumtests2@tut.by\", \"123456789zxcvbn\")",
+  "fullName": "Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(\"seleniumtests2@tut.by\",\"123456789zxcvbn\") (\"seleniumtests2@tut.by\", \"123456789zxcvbn\")",
+  "labels": [
+    {
+      "name": "host",
+      "value": "GUSEVG10"
+    },
+    {
+      "name": "testClass",
+      "value": "Task_50.Tests.Task_50_tutBy"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginTutBy_DDT_Successfull"
+    },
+    {
+      "name": "package",
+      "value": "Task_50.Tests.Task_50_tutBy"
+    },
+    {
+      "name": "suite",
+      "value": "Task_50 tests"
+    },
+    {
+      "name": "subSuite",
+      "value": "LoginTutBy"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "Gleb"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    }
+  ],
+  "links": [
+    {
+      "name": "3",
+      "url": "3",
+      "type": "mylink"
+    }
+  ],
+  "name": "LoginTutBy_DDT_Successfull(\"seleniumtests2@tut.by\",\"123456789zxcvbn\")",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Screenshots\\LoginTutBy_DDT_Successfull___seleniumtests2@tut.by___seleniumtests2@tut.by_123456789zxcvbn_02122019_123015.png'.\r\nTearDown : System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Screenshots\\Failed\\LoginTutBy_DDT_Successfull___seleniumtests2@tut.by___seleniumtests2@tut.by_123456789zxcvbn_02122019_123016.png'.",
+    "trace": "   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.Initialize.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\Initialize.cs:line 47\r\n   at Initialize.Initialize.LaunchBrowser(IWebDriver driver, Uri startPage) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\Initialize.cs:line 58\r\n   at Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(String userName, String password) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Task_50\\Tests\\Task_50_tutBy.cs:line 72\r\n--TearDown\r\n   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.Initialize.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\Initialize.cs:line 47\r\n   at Initialize.TestBase.ScreenshotOnFailure() in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\TestBase.cs:line 43\r\n   at Initialize.TestBase.TestCleanup() in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\TestBase.cs:line 30"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Parameter #1, String",
+      "value": "seleniumtests2@tut.by"
+    },
+    {
+      "name": "Parameter #2, String",
+      "value": "123456789zxcvbn"
+    }
+  ],
+  "start": 1549963809066,
+  "stop": 1549963816113
+}

@@ -48,3 +48,11 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\obj\Debug\Task
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\obj\Debug\Task_20.pdb
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Initialize.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Initialize.pdb
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Task_20.dll.config
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Allure.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Newtonsoft.Json.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\System.ValueTuple.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Initialize.dll.config
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\System.ValueTuple.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_20\bin\Debug\allureConfig.json

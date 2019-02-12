@@ -1,0 +1,66 @@
+{
+  "uuid": "4-1007_6b5e9491b5b54deb83b4f16fc5af8544-4-1005-run1-container",
+  "name": "Task_50.Tests.Task_50_tutBy",
+  "children": [
+    "4-1007_6b5e9491b5b54deb83b4f16fc5af8544-4-1005-test-run1"
+  ],
+  "befores": [
+    {
+      "name": "TearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "TestSetup",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1550014525916,
+          "stop": 1550014525916
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1550014525916,
+      "stop": 1550014535833
+    }
+  ],
+  "afters": [
+    {
+      "name": "TestCleanup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "TestCleanup",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1550014535833,
+          "stop": 1550014535833
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1550014535833,
+      "stop": 1550014535836
+    }
+  ],
+  "links": [],
+  "start": 1550014525914,
+  "stop": 1550014535836
+}

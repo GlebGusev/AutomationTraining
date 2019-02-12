@@ -16,6 +16,7 @@ namespace Initialize
             {
                 directory = directory.Parent;
             }
+            
             return directory;
         }
 
@@ -26,8 +27,10 @@ namespace Initialize
             return Path.Combine(solutionPath, @"Drivers\");
         }
 
-        public static void MakeScreenshot(IWebDriver driver)
+        public static void MakeScreenshot(IWebDriver driver, string saveTo)
         {
+            var ss = ((ITakesScreenshot)driver).GetScreenshot();
+
             var testArguments = TestContext.CurrentContext.Test.Arguments;
             var argumentsString = string.Empty;
 
@@ -39,10 +42,8 @@ namespace Initialize
                     argumentsString += argumentsString + "_" + argument;
                 }
             }
-
-            var ss = ((ITakesScreenshot)driver).GetScreenshot();
-            var solutionPath = TryGetSolutionDirectoryInfo().FullName;
-            var screenshotFile = Path.Combine(solutionPath, @"Screenshots\"
+            
+            var screenshotFile = Path.Combine(Path.Combine(TryGetSolutionDirectoryInfo().FullName, saveTo)
                 , TestContext.CurrentContext.Test.MethodName + argumentsString + "_" + DateTime.Now.ToString("MMddyyyy_hhmmss") + ".png");
             ss.SaveAsFile(screenshotFile, ScreenshotImageFormat.Png);
 
@@ -55,7 +56,7 @@ namespace Initialize
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(condition => driver.Url.Contains(startPage.ToString()));
 
-            MakeScreenshot(driver);
+            MakeScreenshot(driver, @"TestResults\Screenshots\");
         }
     }
 }

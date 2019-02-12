@@ -1,0 +1,63 @@
+{
+  "uuid": "3-1001_c8d63561b62c452c937331be6722b5e4-3-1000-test-run1",
+  "historyId": "Task_20.Tests.Task_20.LoginTutBy_CorrectCredentials_Successfull",
+  "fullName": "Task_20.Tests.Task_20.LoginTutBy_CorrectCredentials_Successfull",
+  "labels": [
+    {
+      "name": "host",
+      "value": "GUSEVG10"
+    },
+    {
+      "name": "testClass",
+      "value": "Task_20.Tests.Task_20"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginTutBy_CorrectCredentials_Successfull"
+    },
+    {
+      "name": "package",
+      "value": "Task_20.Tests.Task_20"
+    },
+    {
+      "name": "suite",
+      "value": "Task_20 tests"
+    },
+    {
+      "name": "subSuite",
+      "value": "LoginTutBy"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "Gleb"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    }
+  ],
+  "links": [
+    {
+      "name": "1",
+      "url": "1",
+      "type": "mylink"
+    }
+  ],
+  "name": "LoginTutBy_CorrectCredentials_Successfull",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1550014475757,
+  "stop": 1550014486673
+}

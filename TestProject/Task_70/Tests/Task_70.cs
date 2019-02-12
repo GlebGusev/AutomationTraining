@@ -1,33 +1,57 @@
 ﻿using System;
+using Allure.NUnit.Attributes;
+using Initialize;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace Task_70.Tests
 {
     [TestFixture]
-    public class Task_70
+    [AllureSuite("Task_70 tests")]
+    public class Task_70 : TestBase
     {
-        private IWebDriver driver;
         private Locators.PageFactory _locators;
         private readonly Uri _startPage = new Uri("https://www.tut.by/");
         private readonly string _username = "seleniumtests@tut.by";
         private readonly string _password = "123456789zxcvbn";
 
         [SetUp]
-        public void TestSetup()
+        public override void TestSetup()
         {
-            driver = new ChromeDriver(chromeDriverDirectory: Initialize.Initialize.GetDriverFolder());
-            driver.Manage().Window.Maximize();
-            _locators = PageFactory.InitElements<Locators.PageFactory>(driver);
+            base.TestSetup();
+            _locators = PageFactory.InitElements<Locators.PageFactory>(_driver);
         }
 
         [Test]
+        [AllureTest]
+        [AllureSubSuite("LoginTutBy")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Normal)]
+        [AllureLink("6")]
+        [AllureOwner("Gleb")]
+        public void Task90_LoginTutByWrongCredentials_Failed()
+        {
+            var username = "seleniumtests444@tut.by";
+
+            //Open start page
+            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
+
+            //Enter credentials
+            _locators.PerformAutorization(username, _password);
+
+            //Validate user logged in
+            _locators.AssertLoggedIn();
+        }
+
+        [Test]
+        [AllureTest]
+        [AllureSubSuite("LoginTutBy")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Normal)]
+        [AllureLink("6")]
+        [AllureOwner("Gleb")]
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(driver, _startPage);
+            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
 
             //Enter credentials
             _locators.PerformAutorization(_username, _password);
@@ -37,22 +61,21 @@ namespace Task_70.Tests
         }
 
         [Test]
+        [AllureTest]
+        [AllureSubSuite("LoginTutBy")]
+        [AllureSeverity(Allure.Commons.Model.SeverityLevel.Normal)]
+        [AllureLink("6")]
+        [AllureOwner("Gleb")]
         public void LogoutTutBy_ClickLogoutLink_Successfull()
         {
             //Login
             LoginTutBy_CorrectCredentials_Successfull();
 
             //Logout
-            _locators.ClickLogoutLink();
+            _locators.PerformLogOut();
 
             //Validate user logged out
             _locators.AssertLoggedOut();
-        }
-
-        [OneTimeTearDown]
-        public void TestCleanup()
-        {
-            driver.Quit();
         }
     }
 }

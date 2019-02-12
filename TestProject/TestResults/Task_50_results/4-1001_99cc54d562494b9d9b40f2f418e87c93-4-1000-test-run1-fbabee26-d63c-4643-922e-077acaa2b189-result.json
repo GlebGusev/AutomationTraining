@@ -1,0 +1,63 @@
+{
+  "uuid": "4-1001_99cc54d562494b9d9b40f2f418e87c93-4-1000-test-run1",
+  "historyId": "Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added",
+  "fullName": "Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added",
+  "labels": [
+    {
+      "name": "host",
+      "value": "GUSEVG10"
+    },
+    {
+      "name": "testClass",
+      "value": "Task_50.Tests.Task_50_herokuapp"
+    },
+    {
+      "name": "testMethod",
+      "value": "Herokuapp_AddTextToFrame_Added"
+    },
+    {
+      "name": "package",
+      "value": "Task_50.Tests.Task_50_herokuapp"
+    },
+    {
+      "name": "suite",
+      "value": "Task_50_hero tests"
+    },
+    {
+      "name": "subSuite",
+      "value": "FrameTests"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "Gleb"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    }
+  ],
+  "links": [
+    {
+      "name": "4",
+      "url": "4",
+      "type": "mylink"
+    }
+  ],
+  "name": "Herokuapp_AddTextToFrame_Added",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1550014487171,
+  "stop": 1550014498317
+}

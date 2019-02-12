@@ -1,8 +1,9 @@
-﻿using OpenQA.Selenium;
+﻿using Initialize;
+using OpenQA.Selenium;
 
 namespace Task_50.Locators
 {
-    public class HerokuappLocators
+    public class HerokuappLocators : MapBase
     {
         public By frameWindow = By.Id("mce_0_ifr");
 

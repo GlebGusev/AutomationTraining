@@ -1,0 +1,65 @@
+{
+  "uuid": "4-1001_2855bc8a1bad4993a3ff7c9578480122-4-1000-test-run1",
+  "historyId": "Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added",
+  "fullName": "Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added",
+  "labels": [
+    {
+      "name": "host",
+      "value": "GUSEVG10"
+    },
+    {
+      "name": "testClass",
+      "value": "Task_50.Tests.Task_50_herokuapp"
+    },
+    {
+      "name": "testMethod",
+      "value": "Herokuapp_AddTextToFrame_Added"
+    },
+    {
+      "name": "package",
+      "value": "Task_50.Tests.Task_50_herokuapp"
+    },
+    {
+      "name": "suite",
+      "value": "Task_50_hero tests"
+    },
+    {
+      "name": "subSuite",
+      "value": "FrameTests"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "Gleb"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    }
+  ],
+  "links": [
+    {
+      "name": "4",
+      "url": "4",
+      "type": "mylink"
+    }
+  ],
+  "name": "Herokuapp_AddTextToFrame_Added",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Screenshots\\Herokuapp_AddTextToFrame_Added_02122019_122935.png'.\r\nTearDown : System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Screenshots\\Failed\\Herokuapp_AddTextToFrame_Added_02122019_122935.png'.",
+    "trace": "   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.Initialize.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\Initialize.cs:line 47\r\n   at Initialize.Initialize.LaunchBrowser(IWebDriver driver, Uri startPage) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\Initialize.cs:line 58\r\n   at Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added() in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Task_50\\Tests\\Task_50_herokuapp.cs:line 37\r\n--TearDown\r\n   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.Initialize.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\Initialize.cs:line 47\r\n   at Initialize.TestBase.ScreenshotOnFailure() in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\TestBase.cs:line 43\r\n   at Initialize.TestBase.TestCleanup() in C:\\Users\\GlebGusev\\Desktop\\AutomationTraining\\TestProject\\Initialize\\TestBase.cs:line 30"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1549963768937,
+  "stop": 1549963775365
+}

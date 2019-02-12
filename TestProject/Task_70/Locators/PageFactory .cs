@@ -1,13 +1,14 @@
-﻿using NUnit.Framework;
+﻿using Initialize;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace Task_70.Locators
 {
-    public class PageFactory
+    public class PageFactory : MapBase
     {
         [FindsBy(How=How.XPath, Using = "//a[contains(text(),'Войти')]")]
-        IWebElement enterLink;
+        public IWebElement enterLink;
 
         [FindsBy(How = How.PartialLinkText, Using = "не помню")]
         IWebElement forgotPasswordLink;
@@ -28,16 +29,16 @@ namespace Task_70.Locators
         IWebElement personalRoomText;
 
         [FindsBy(How = How.CssSelector, Using = ".uname")]
-        IWebElement loggedInSpan;
+        public IWebElement loggedInSpan;
 
         [FindsBy(How = How.LinkText, Using = "Выйти")]
         IWebElement logOutLink;
 
-        private IWebDriver driver;
+        private IWebDriver _driver;
 
         public PageFactory(IWebDriver driver)
         {
-            this.driver = driver;
+            this._driver = driver;
         }
 
         public void ClickEnterLink()
@@ -78,16 +79,25 @@ namespace Task_70.Locators
             ClickLoginButton();
         }
 
-        public void AssertLoggedIn()
+        public void PerformLogOut()
         {
             ClickLoggedInSpan();
+            ClickLogoutLink();
+        }
 
-            Assert.AreEqual("Личный кабинет", personalRoomText.Text);
+        public void AssertLoggedIn()
+        {
+            if (!IsElementDisplayed(loggedInSpan))
+            {
+                ClickEnterLink();
+                Assert.Fail("User not logged in. See screenshot");
+            }
         }
 
         public void AssertLoggedOut()
         {
-            Assert.IsNotNull(enterLink);
+            if (!IsElementDisplayed(enterLink))
+                Assert.Fail("User not logged out. See screenshot");
         }
     }
 }
