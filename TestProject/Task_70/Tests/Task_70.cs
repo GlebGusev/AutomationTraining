@@ -19,7 +19,7 @@ namespace Task_70.Tests
         public override void TestSetup()
         {
             base.TestSetup();
-            _locators = PageFactory.InitElements<Locators.PageFactory>(_driver);
+            _locators = PageFactory.InitElements<Locators.PageFactory>(Driver);
         }
 
         [Test]
@@ -33,7 +33,7 @@ namespace Task_70.Tests
             var username = "seleniumtests444@tut.by";
 
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
 
             //Enter credentials
             _locators.PerformAutorization(username, _password);
@@ -51,7 +51,7 @@ namespace Task_70.Tests
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
 
             //Enter credentials
             _locators.PerformAutorization(_username, _password);

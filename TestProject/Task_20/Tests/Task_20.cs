@@ -30,31 +30,31 @@ namespace Task_20.Tests
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
 
             //Enter credentials
-            _driver.FindElement(_locators.enterLink).Click();
+            Driver.FindElement(_locators.enterLink).Click();
             
-            var userNameInput = _driver.FindElement(_locators.userNameInput);
+            var userNameInput = Driver.FindElement(_locators.userNameInput);
             userNameInput.Clear();
             userNameInput.SendKeys(_username);
 
-            var passwordInput = _driver.FindElement(_locators.passwordInput);
+            var passwordInput = Driver.FindElement(_locators.passwordInput);
             passwordInput.Clear();
             passwordInput.SendKeys(_password);
 
             //Assert forgot password link displays
-            Assert.True(_driver.FindElement(_locators.forgotPasswordLink).Displayed, "Forgot password link is not displayed");
+            Assert.True(Driver.FindElement(_locators.forgotPasswordLink).Displayed, "Forgot password link is not displayed");
 
             //Login
-            _driver.FindElement(_locators.enterButton).Click();
+            Driver.FindElement(_locators.enterButton).Click();
 
             //Validate user logged in
-            _driver.FindElement(_locators.loggedInSpan).Click();
+            Driver.FindElement(_locators.loggedInSpan).Click();
 
-            Assert.AreEqual("Личный кабинет", _driver.FindElement(_locators.personalRoomText).Text);
+            Assert.AreEqual("Личный кабинет", Driver.FindElement(_locators.personalRoomText).Text);
 
-            _driver.FindElement(_locators.logOutLink).Click();
+            Driver.FindElement(_locators.logOutLink).Click();
         }
     }
 }

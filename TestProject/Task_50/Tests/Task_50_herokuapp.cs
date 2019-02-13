@@ -21,7 +21,7 @@ namespace Task_50.Tests
         public override void TestSetup()
         {
             base.TestSetup();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             _locators = new Locators.HerokuappLocators();
         }
 
@@ -34,29 +34,29 @@ namespace Task_50.Tests
         public void Herokuapp_AddTextToFrame_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPageFrame);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPageFrame);
 
             //FInd Frame and clear
-            var frameWindow = _driver.FindElement(_locators.frameWindow);
-            _driver.SwitchTo().Frame(frameWindow);
+            var frameWindow = Driver.FindElement(_locators.frameWindow);
+            Driver.SwitchTo().Frame(frameWindow);
 
-            var editArea = _driver.FindElement(_locators.frameBody);
+            var editArea = Driver.FindElement(_locators.frameBody);
             editArea.Clear();
 
             //Enter text in Frame
             editArea.SendKeys(_textToEnter[0]);
 
-            _driver.SwitchTo().DefaultContent();
-            _driver.FindElement(_locators.boldButton).Click();
+            Driver.SwitchTo().DefaultContent();
+            Driver.FindElement(_locators.boldButton).Click();
 
-            _driver.SwitchTo().Frame(frameWindow);
+            Driver.SwitchTo().Frame(frameWindow);
             editArea.SendKeys(_textToEnter[1]);
 
-            _driver.SwitchTo().DefaultContent();
-            _driver.FindElement(_locators.boldButton).Click();
+            Driver.SwitchTo().DefaultContent();
+            Driver.FindElement(_locators.boldButton).Click();
 
             //Validate text in Frame
-            _driver.SwitchTo().Frame(frameWindow);
+            Driver.SwitchTo().Frame(frameWindow);
             var editorText = Regex.Replace(editArea.Text, @"[^\u0000-\u007F]+", string.Empty);
 
             Assert.AreEqual(_textToEnter[0] + _textToEnter[1], editorText);
@@ -72,14 +72,14 @@ namespace Task_50.Tests
         public void Herokuapp_Alert_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPageAlert);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPageAlert);
 
             //Accept Alert
-            _locators.WaitForElementDisplayed(_driver, _locators.clickForJSAlertButton);
-            _driver.FindElement(_locators.clickForJSAlertButton).Click();
-            _driver.SwitchTo().Alert().Accept();
+            _locators.WaitForElementDisplayed(Driver, _locators.clickForJSAlertButton);
+            Driver.FindElement(_locators.clickForJSAlertButton).Click();
+            Driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You successfuly clicked an alert", _driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You successfuly clicked an alert", Driver.FindElement(_locators.resultMessage).Text);
         }
 
         [Test]
@@ -91,21 +91,21 @@ namespace Task_50.Tests
         public void Herokuapp_Confirm_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPageAlert);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPageAlert);
 
             //Cancel Confirm
-            _locators.WaitForElementDisplayed(_driver, _locators.clickForJSConfirmButton);
-            var confirmButton = _driver.FindElement(_locators.clickForJSConfirmButton);
+            _locators.WaitForElementDisplayed(Driver, _locators.clickForJSConfirmButton);
+            var confirmButton = Driver.FindElement(_locators.clickForJSConfirmButton);
             confirmButton.Click();
-            _driver.SwitchTo().Alert().Dismiss();
+            Driver.SwitchTo().Alert().Dismiss();
 
-            Assert.AreEqual("You clicked: Cancel", _driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You clicked: Cancel", Driver.FindElement(_locators.resultMessage).Text);
 
             //Accept Confirm
             confirmButton.Click();
-            _driver.SwitchTo().Alert().Accept();
+            Driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You clicked: Ok", _driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You clicked: Ok", Driver.FindElement(_locators.resultMessage).Text);
         }
 
         [Test]
@@ -117,28 +117,28 @@ namespace Task_50.Tests
         public void Herokuapp_Prompt_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPageAlert);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPageAlert);
 
             //Cancel Prompt
-            _locators.WaitForElementDisplayed(_driver, _locators.clickForJSPromptButton);
-            var promptButton = _driver.FindElement(_locators.clickForJSPromptButton);
+            _locators.WaitForElementDisplayed(Driver, _locators.clickForJSPromptButton);
+            var promptButton = Driver.FindElement(_locators.clickForJSPromptButton);
             promptButton.Click();
-            _driver.SwitchTo().Alert().Dismiss();
+            Driver.SwitchTo().Alert().Dismiss();
 
-            Assert.AreEqual("You entered: null", _driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You entered: null", Driver.FindElement(_locators.resultMessage).Text);
 
             //Accept Prompt with no value
             promptButton.Click();
-            _driver.SwitchTo().Alert().Accept();
+            Driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You entered:", _driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You entered:", Driver.FindElement(_locators.resultMessage).Text);
 
             //Accept Prompt with no value
             promptButton.Click();
-            _driver.SwitchTo().Alert().SendKeys("a");
-            _driver.SwitchTo().Alert().Accept();
+            Driver.SwitchTo().Alert().SendKeys("a");
+            Driver.SwitchTo().Alert().Accept();
 
-            Assert.AreEqual("You entered: a", _driver.FindElement(_locators.resultMessage).Text);
+            Assert.AreEqual("You entered: a", Driver.FindElement(_locators.resultMessage).Text);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Task_50.Tests
         public override void TestSetup()
         {
             base.TestSetup();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             _locators = new Locators.TutByLocators();
         }
 
@@ -34,28 +34,28 @@ namespace Task_50.Tests
         public void LoginTutBy_CorrectCredentialsAndWait_Successfull()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
-            _driver.FindElement(_locators.enterLink).Click();
+            Driver.FindElement(_locators.enterLink).Click();
 
-            var userNameInput = _driver.FindElement(_locators.userNameInput);
+            var userNameInput = Driver.FindElement(_locators.userNameInput);
             userNameInput.Clear();
             userNameInput.SendKeys(_username);
 
-            var passwordInput = _driver.FindElement(_locators.passwordInput);
+            var passwordInput = Driver.FindElement(_locators.passwordInput);
             passwordInput.Clear();
             passwordInput.SendKeys(_password);
 
             //Login
-            _driver.FindElement(_locators.enterButton).Click();
+            Driver.FindElement(_locators.enterButton).Click();
 
             //Validate user logged in
-            _locators.WaitForElementDisplayed(_driver, _locators.loggedInSpan);
-            _driver.FindElement(_locators.loggedInSpan).Click();
+            _locators.WaitForElementDisplayed(Driver, _locators.loggedInSpan);
+            Driver.FindElement(_locators.loggedInSpan).Click();
 
-            Assert.True(_driver.FindElement(_locators.personalRoomText).Displayed);
+            Assert.True(Driver.FindElement(_locators.personalRoomText).Displayed);
         }
 
         [Test]
@@ -69,28 +69,28 @@ namespace Task_50.Tests
         public bool LoginTutBy_DDT_Successfull(string userName, string password)
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(_driver, _startPage);
+            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
-            _driver.FindElement(_locators.enterLink).Click();
+            Driver.FindElement(_locators.enterLink).Click();
 
-            var userNameInput = _driver.FindElement(_locators.userNameInput);
+            var userNameInput = Driver.FindElement(_locators.userNameInput);
             userNameInput.Clear();
             userNameInput.SendKeys(userName);
 
-            var passwordInput = _driver.FindElement(_locators.passwordInput);
+            var passwordInput = Driver.FindElement(_locators.passwordInput);
             passwordInput.Clear();
             passwordInput.SendKeys(password);
 
             //Login
-            _driver.FindElement(_locators.enterButton).Click();
+            Driver.FindElement(_locators.enterButton).Click();
 
             //Validate user logged in
-            _locators.WaitForElementDisplayed(_driver, _locators.loggedInSpan);
-            _driver.FindElement(_locators.loggedInSpan).Click();
+            _locators.WaitForElementDisplayed(Driver, _locators.loggedInSpan);
+            Driver.FindElement(_locators.loggedInSpan).Click();
 
-            return _driver.FindElement(_locators.personalRoomText).Displayed;
+            return Driver.FindElement(_locators.personalRoomText).Displayed;
         }
     }
 }

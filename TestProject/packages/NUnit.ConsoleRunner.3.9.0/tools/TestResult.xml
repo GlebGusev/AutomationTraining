@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="11" result="Failed" total="11" passed="10" failed="1" inconclusive="0" skipped="0" asserts="13" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2019-02-12 23:34:35Z" end-time="2019-02-12 23:36:09Z" duration="94.353759">
+<test-run id="2" testcasecount="11" result="Failed" total="11" passed="6" failed="5" inconclusive="0" skipped="0" asserts="6" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2019-02-13 13:46:51Z" end-time="2019-02-13 13:50:02Z" duration="190.974939">
   <command-line><![CDATA[nunit3-console  C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple]]></command-line>
-  <test-suite type="Assembly" id="3-1002" name="Task_20.dll" fullname="Task_20.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-12 23:34:35Z" end-time="2019-02-12 23:34:46Z" duration="11.205750" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+  <test-suite type="Assembly" id="3-1002" name="Task_20.dll" fullname="Task_20.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-13 13:46:51Z" end-time="2019-02-13 13:47:30Z" duration="38.953581" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
     <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x86" />
     <settings>
       <setting name="ProcessModel" value="Multiple" />
@@ -18,12 +18,12 @@
       <setting name="NumberOfTestWorkers" value="8" />
     </settings>
     <properties>
-      <property name="_PID" value="16020" />
+      <property name="_PID" value="22964" />
       <property name="_APPDOMAIN" value="domain-f0452dfe-Task_20.dll" />
     </properties>
-    <test-suite type="TestSuite" id="3-1003" name="Task_20" fullname="Task_20" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-12 23:34:35Z" end-time="2019-02-12 23:34:46Z" duration="11.194678" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
-      <test-suite type="TestSuite" id="3-1004" name="Tests" fullname="Task_20.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-12 23:34:35Z" end-time="2019-02-12 23:34:46Z" duration="11.194390" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
-        <test-suite type="TestFixture" id="3-1000" name="Task_20" fullname="Task_20.Tests.Task_20" classname="Task_20.Tests.Task_20" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-12 23:34:35Z" end-time="2019-02-12 23:34:46Z" duration="11.192391" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <test-suite type="TestSuite" id="3-1003" name="Task_20" fullname="Task_20" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-13 13:46:51Z" end-time="2019-02-13 13:47:30Z" duration="38.942387" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <test-suite type="TestSuite" id="3-1004" name="Tests" fullname="Task_20.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-13 13:46:51Z" end-time="2019-02-13 13:47:30Z" duration="38.941988" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <test-suite type="TestFixture" id="3-1000" name="Task_20" fullname="Task_20.Tests.Task_20" classname="Task_20.Tests.Task_20" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-02-13 13:46:51Z" end-time="2019-02-13 13:47:30Z" duration="38.939915" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
           <properties>
             <property name="FixtureUuidProp" value="Task_20.Tests.Task_20-fixture" />
             <property name="AllTestsInFixtureProp" value="System.Collections.Concurrent.ConcurrentBag`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
@@ -31,10 +31,10 @@
             <property name="RunsCountTestsProp" value="System.Collections.Generic.List`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
             <property name="IgnoredTestsProp" value="System.Collections.Generic.Dictionary`2[NUnit.Framework.Interfaces.ITest,System.String]" />
           </properties>
-          <test-case id="3-1001" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_20.Tests.Task_20.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_20.Tests.Task_20" runstate="Runnable" seed="1512696983" result="Passed" start-time="2019-02-12 23:34:35Z" end-time="2019-02-12 23:34:46Z" duration="10.925268" asserts="2">
+          <test-case id="3-1001" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_20.Tests.Task_20.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_20.Tests.Task_20" runstate="Runnable" seed="2076191889" result="Passed" start-time="2019-02-13 13:46:51Z" end-time="2019-02-13 13:47:30Z" duration="38.624308" asserts="2">
             <properties>
-              <property name="TestContainerUuidProp" value="3-1001_c8d63561b62c452c937331be6722b5e4-3-1000-run1-container" />
-              <property name="TestUuidProp" value="3-1001_c8d63561b62c452c937331be6722b5e4-3-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="3-1001_fc84c056066b4705acd67f31499744f5-3-1000-run1-container" />
+              <property name="TestUuidProp" value="3-1001_fc84c056066b4705acd67f31499744f5-3-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_20.Tests.Task_20-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
@@ -43,7 +43,7 @@
             </properties>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_CorrectCredentials_Successfull_02132019_023442.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_CorrectCredentials_Successfull_02132019_044657.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
@@ -52,7 +52,7 @@
       </test-suite>
     </test-suite>
   </test-suite>
-  <test-suite type="Assembly" id="4-1010" name="Task_50.dll" fullname="Task_50.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2019-02-12 23:34:46Z" end-time="2019-02-12 23:35:46Z" duration="59.265578" total="7" passed="7" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+  <test-suite type="Assembly" id="4-1010" name="Task_50.dll" fullname="Task_50.dll" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2019-02-13 13:47:30Z" end-time="2019-02-13 13:49:38Z" duration="128.257771" total="7" passed="3" failed="4" warnings="0" inconclusive="0" skipped="0" asserts="4">
     <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x86" />
     <settings>
       <setting name="ProcessModel" value="Multiple" />
@@ -69,12 +69,21 @@
       <setting name="NumberOfTestWorkers" value="8" />
     </settings>
     <properties>
-      <property name="_PID" value="16020" />
+      <property name="_PID" value="22964" />
       <property name="_APPDOMAIN" value="domain-ef2e2dfe-Task_50.dll" />
     </properties>
-    <test-suite type="TestSuite" id="4-1011" name="Task_50" fullname="Task_50" runstate="Runnable" testcasecount="7" result="Passed" start-time="2019-02-12 23:34:46Z" end-time="2019-02-12 23:35:46Z" duration="59.254630" total="7" passed="7" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
-      <test-suite type="TestSuite" id="4-1012" name="Tests" fullname="Task_50.Tests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2019-02-12 23:34:46Z" end-time="2019-02-12 23:35:46Z" duration="59.254356" total="7" passed="7" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
-        <test-suite type="TestFixture" id="4-1000" name="Task_50_herokuapp" fullname="Task_50.Tests.Task_50_herokuapp" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" testcasecount="4" result="Passed" start-time="2019-02-12 23:34:46Z" end-time="2019-02-12 23:35:15Z" duration="28.466981" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="8">
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="4-1011" name="Task_50" fullname="Task_50" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2019-02-13 13:47:30Z" end-time="2019-02-13 13:49:38Z" duration="128.245982" total="7" passed="3" failed="4" warnings="0" inconclusive="0" skipped="0" asserts="4">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="4-1012" name="Tests" fullname="Task_50.Tests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2019-02-13 13:47:30Z" end-time="2019-02-13 13:49:38Z" duration="128.245732" total="7" passed="3" failed="4" warnings="0" inconclusive="0" skipped="0" asserts="4">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestFixture" id="4-1000" name="Task_50_herokuapp" fullname="Task_50.Tests.Task_50_herokuapp" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2019-02-13 13:47:30Z" end-time="2019-02-13 13:48:24Z" duration="53.732119" total="4" passed="1" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="2">
           <properties>
             <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_herokuapp-fixture" />
             <property name="AllTestsInFixtureProp" value="System.Collections.Concurrent.ConcurrentBag`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
@@ -82,10 +91,13 @@
             <property name="RunsCountTestsProp" value="System.Collections.Generic.List`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
             <property name="IgnoredTestsProp" value="System.Collections.Generic.Dictionary`2[NUnit.Framework.Interfaces.ITest,System.String]" />
           </properties>
-          <test-case id="4-1001" name="Herokuapp_AddTextToFrame_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added" methodname="Herokuapp_AddTextToFrame_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="734979182" result="Passed" start-time="2019-02-12 23:34:47Z" end-time="2019-02-12 23:34:58Z" duration="11.159535" asserts="2">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="4-1001" name="Herokuapp_AddTextToFrame_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_AddTextToFrame_Added" methodname="Herokuapp_AddTextToFrame_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="1538011334" result="Passed" start-time="2019-02-13 13:47:30Z" end-time="2019-02-13 13:47:37Z" duration="6.348464" asserts="2">
             <properties>
-              <property name="TestContainerUuidProp" value="4-1001_99cc54d562494b9d9b40f2f418e87c93-4-1000-run1-container" />
-              <property name="TestUuidProp" value="4-1001_99cc54d562494b9d9b40f2f418e87c93-4-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="4-1001_883176d1cc234f7581641990a814bc58-4-1000-run1-container" />
+              <property name="TestUuidProp" value="4-1001_883176d1cc234f7581641990a814bc58-4-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_herokuapp-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
@@ -94,64 +106,136 @@
             </properties>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_AddTextToFrame_Added_02132019_023452.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_AddTextToFrame_Added_02132019_044736.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
-          <test-case id="4-1002" name="Herokuapp_Alert_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Alert_Added" methodname="Herokuapp_Alert_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="43965680" result="Passed" start-time="2019-02-12 23:34:58Z" end-time="2019-02-12 23:35:03Z" duration="5.531606" asserts="1">
+          <test-case id="4-1002" name="Herokuapp_Alert_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Alert_Added" methodname="Herokuapp_Alert_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="351991558" result="Failed" label="Error" start-time="2019-02-13 13:47:37Z" end-time="2019-02-13 13:47:53Z" duration="15.743692" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="4-1002_7edfcd63e7d145c280c81912a113b996-4-1000-run1-container" />
-              <property name="TestUuidProp" value="4-1002_7edfcd63e7d145c280c81912a113b996-4-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="4-1002_e57d1941d54842abae386abcbe458e8b-4-1000-run1-container" />
+              <property name="TestUuidProp" value="4-1002_e57d1941d54842abae386abcbe458e8b-4-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_herokuapp-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
               <property name="CurrentTestTearDownFixtureProp" value="TestCleanup" />
               <property name="TestResultProp" value="NUnit.Framework.TestContext+ResultAdapter" />
             </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Click for JS Alert']"}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Initialize.MapBase.WaitForElementDisplayed(IWebDriver driver, By locator) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 15
+   at Task_50.Tests.Task_50_herokuapp.Herokuapp_Alert_Added() in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\Tests\Task_50_herokuapp.cs:line 78
+--NoSuchElementException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at Initialize.MapBase.<>c__DisplayClass1_0.<WaitForElementDisplayed>b__0(IWebDriver condition) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 19
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)]]></stack-trace>
+            </failure>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_Alert_Added_02132019_023503.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_Alert_Added_02132019_044741.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Failed\Herokuapp_Alert_Added_02132019_044752.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
-          <test-case id="4-1003" name="Herokuapp_Confirm_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Confirm_Added" methodname="Herokuapp_Confirm_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="754472291" result="Passed" start-time="2019-02-12 23:35:03Z" end-time="2019-02-12 23:35:09Z" duration="5.728838" asserts="2">
+          <test-case id="4-1003" name="Herokuapp_Confirm_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Confirm_Added" methodname="Herokuapp_Confirm_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="1706601414" result="Failed" label="Error" start-time="2019-02-13 13:47:53Z" end-time="2019-02-13 13:48:08Z" duration="15.663676" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="4-1003_8aee5fdaf36343c6aa521cc797b13b1a-4-1000-run1-container" />
-              <property name="TestUuidProp" value="4-1003_8aee5fdaf36343c6aa521cc797b13b1a-4-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="4-1003_33a340ac98a046d5aaf8bb2e08619ea9-4-1000-run1-container" />
+              <property name="TestUuidProp" value="4-1003_33a340ac98a046d5aaf8bb2e08619ea9-4-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_herokuapp-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
               <property name="CurrentTestTearDownFixtureProp" value="TestCleanup" />
               <property name="TestResultProp" value="NUnit.Framework.TestContext+ResultAdapter" />
             </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Click for JS Confirm']"}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Initialize.MapBase.WaitForElementDisplayed(IWebDriver driver, By locator) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 15
+   at Task_50.Tests.Task_50_herokuapp.Herokuapp_Confirm_Added() in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\Tests\Task_50_herokuapp.cs:line 97
+--NoSuchElementException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at Initialize.MapBase.<>c__DisplayClass1_0.<WaitForElementDisplayed>b__0(IWebDriver condition) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 19
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)]]></stack-trace>
+            </failure>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_Confirm_Added_02132019_023509.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_Confirm_Added_02132019_044757.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Failed\Herokuapp_Confirm_Added_02132019_044808.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
-          <test-case id="4-1004" name="Herokuapp_Prompt_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Prompt_Added" methodname="Herokuapp_Prompt_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="204599922" result="Passed" start-time="2019-02-12 23:35:09Z" end-time="2019-02-12 23:35:15Z" duration="5.783205" asserts="3">
+          <test-case id="4-1004" name="Herokuapp_Prompt_Added" fullname="Task_50.Tests.Task_50_herokuapp.Herokuapp_Prompt_Added" methodname="Herokuapp_Prompt_Added" classname="Task_50.Tests.Task_50_herokuapp" runstate="Runnable" seed="803184622" result="Failed" label="Error" start-time="2019-02-13 13:48:08Z" end-time="2019-02-13 13:48:24Z" duration="15.687842" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="4-1004_a0bef2bec82449af8ea11ad7d5b6564c-4-1000-run1-container" />
-              <property name="TestUuidProp" value="4-1004_a0bef2bec82449af8ea11ad7d5b6564c-4-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="4-1004_ba8b00504574499d8c192f9b78bf34ad-4-1000-run1-container" />
+              <property name="TestUuidProp" value="4-1004_ba8b00504574499d8c192f9b78bf34ad-4-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_herokuapp-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
               <property name="CurrentTestTearDownFixtureProp" value="TestCleanup" />
               <property name="TestResultProp" value="NUnit.Framework.TestContext+ResultAdapter" />
             </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Click for JS Prompt']"}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Initialize.MapBase.WaitForElementDisplayed(IWebDriver driver, By locator) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 15
+   at Task_50.Tests.Task_50_herokuapp.Herokuapp_Prompt_Added() in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\Tests\Task_50_herokuapp.cs:line 123
+--NoSuchElementException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at Initialize.MapBase.<>c__DisplayClass1_0.<WaitForElementDisplayed>b__0(IWebDriver condition) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 19
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)]]></stack-trace>
+            </failure>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_Prompt_Added_02132019_023515.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Herokuapp_Prompt_Added_02132019_044812.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Failed\Herokuapp_Prompt_Added_02132019_044824.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
         </test-suite>
-        <test-suite type="TestFixture" id="4-1005" name="Task_50_tutBy" fullname="Task_50.Tests.Task_50_tutBy" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" testcasecount="3" result="Passed" start-time="2019-02-12 23:35:15Z" end-time="2019-02-12 23:35:46Z" duration="30.784213" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+        <test-suite type="TestFixture" id="4-1005" name="Task_50_tutBy" fullname="Task_50.Tests.Task_50_tutBy" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-13 13:48:24Z" end-time="2019-02-13 13:49:38Z" duration="74.510387" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
           <properties>
             <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_tutBy-fixture" />
             <property name="AllTestsInFixtureProp" value="System.Collections.Concurrent.ConcurrentBag`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
@@ -159,28 +243,55 @@
             <property name="RunsCountTestsProp" value="System.Collections.Generic.List`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
             <property name="IgnoredTestsProp" value="System.Collections.Generic.Dictionary`2[NUnit.Framework.Interfaces.ITest,System.String]" />
           </properties>
-          <test-case id="4-1006" name="LoginTutBy_CorrectCredentialsAndWait_Successfull" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull" methodname="LoginTutBy_CorrectCredentialsAndWait_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1979206828" result="Passed" start-time="2019-02-12 23:35:15Z" end-time="2019-02-12 23:35:25Z" duration="10.484988" asserts="1">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="4-1006" name="LoginTutBy_CorrectCredentialsAndWait_Successfull" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull" methodname="LoginTutBy_CorrectCredentialsAndWait_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1291449723" result="Failed" label="Error" start-time="2019-02-13 13:48:24Z" end-time="2019-02-13 13:48:47Z" duration="22.642174" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="4-1006_35e544ab6be1407e8acfb1d14b42df72-4-1005-run1-container" />
-              <property name="TestUuidProp" value="4-1006_35e544ab6be1407e8acfb1d14b42df72-4-1005-test-run1" />
+              <property name="TestContainerUuidProp" value="4-1006_ca76bfed2e3549ce9d686f615d900330-4-1005-run1-container" />
+              <property name="TestUuidProp" value="4-1006_ca76bfed2e3549ce9d686f615d900330-4-1005-test-run1" />
               <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_tutBy-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
               <property name="CurrentTestTearDownFixtureProp" value="TestCleanup" />
               <property name="TestResultProp" value="NUnit.Framework.TestContext+ResultAdapter" />
             </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":".uname"}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Initialize.MapBase.WaitForElementDisplayed(IWebDriver driver, By locator) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 15
+   at Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull() in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\Tests\Task_50_tutBy.cs:line 55
+--NoSuchElementException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByCssSelector(String cssSelector)
+   at OpenQA.Selenium.By.<>c__DisplayClass23_0.<CssSelector>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at Initialize.MapBase.<>c__DisplayClass1_0.<WaitForElementDisplayed>b__0(IWebDriver condition) in C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\MapBase.cs:line 19
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)]]></stack-trace>
+            </failure>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_CorrectCredentialsAndWait_Successfull_02132019_023521.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_CorrectCredentialsAndWait_Successfull_02132019_044830.png</filePath>
+                <description><![CDATA[My Screenshot]]></description>
+              </attachment>
+              <attachment>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Failed\LoginTutBy_CorrectCredentialsAndWait_Successfull_02132019_044846.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
-          <test-suite type="ParameterizedMethod" id="4-1009" name="LoginTutBy_DDT_Successfull" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-12 23:35:25Z" end-time="2019-02-12 23:35:46Z" duration="20.292220" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
-            <test-case id="4-1007" name="LoginTutBy_DDT_Successfull(&quot;seleniumtests@tut.by&quot;,&quot;123456789zxcvbn&quot;)" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(&quot;seleniumtests@tut.by&quot;,&quot;123456789zxcvbn&quot;)" methodname="LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1832020143" result="Passed" start-time="2019-02-12 23:35:25Z" end-time="2019-02-12 23:35:35Z" duration="9.922908" asserts="1">
+          <test-suite type="ParameterizedMethod" id="4-1009" name="LoginTutBy_DDT_Successfull" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-02-13 13:48:47Z" end-time="2019-02-13 13:49:38Z" duration="51.838962" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+            <test-case id="4-1007" name="LoginTutBy_DDT_Successfull(&quot;seleniumtests@tut.by&quot;,&quot;123456789zxcvbn&quot;)" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(&quot;seleniumtests@tut.by&quot;,&quot;123456789zxcvbn&quot;)" methodname="LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="523295757" result="Passed" start-time="2019-02-13 13:48:47Z" end-time="2019-02-13 13:49:28Z" duration="41.173521" asserts="1">
               <properties>
-                <property name="TestContainerUuidProp" value="4-1007_6b5e9491b5b54deb83b4f16fc5af8544-4-1005-run1-container" />
-                <property name="TestUuidProp" value="4-1007_6b5e9491b5b54deb83b4f16fc5af8544-4-1005-test-run1" />
+                <property name="TestContainerUuidProp" value="4-1007_6bf865afe5bd4163924a695fe4f15ff0-4-1005-run1-container" />
+                <property name="TestUuidProp" value="4-1007_6bf865afe5bd4163924a695fe4f15ff0-4-1005-test-run1" />
                 <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_tutBy-fixture" />
                 <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
                 <property name="CurrentTestSetupFixtureProp" value="" />
@@ -189,15 +300,15 @@
               </properties>
               <attachments>
                 <attachment>
-                  <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_DDT_Successfull___seleniumtests@tut.by___seleniumtests@tut.by_123456789zxcvbn_02132019_023531.png</filePath>
+                  <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_DDT_Successfull___seleniumtests@tut.by___seleniumtests@tut.by_123456789zxcvbn_02132019_044853.png</filePath>
                   <description><![CDATA[My Screenshot]]></description>
                 </attachment>
               </attachments>
             </test-case>
-            <test-case id="4-1008" name="LoginTutBy_DDT_Successfull(&quot;seleniumtests2@tut.by&quot;,&quot;123456789zxcvbn&quot;)" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(&quot;seleniumtests2@tut.by&quot;,&quot;123456789zxcvbn&quot;)" methodname="LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1426830381" result="Passed" start-time="2019-02-12 23:35:35Z" end-time="2019-02-12 23:35:46Z" duration="10.369005" asserts="1">
+            <test-case id="4-1008" name="LoginTutBy_DDT_Successfull(&quot;seleniumtests2@tut.by&quot;,&quot;123456789zxcvbn&quot;)" fullname="Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(&quot;seleniumtests2@tut.by&quot;,&quot;123456789zxcvbn&quot;)" methodname="LoginTutBy_DDT_Successfull" classname="Task_50.Tests.Task_50_tutBy" runstate="Runnable" seed="1908160580" result="Passed" start-time="2019-02-13 13:49:28Z" end-time="2019-02-13 13:49:38Z" duration="10.665154" asserts="1">
               <properties>
-                <property name="TestContainerUuidProp" value="4-1008_15ebf34cc05745fe91f4a90efc8474a2-4-1005-run1-container" />
-                <property name="TestUuidProp" value="4-1008_15ebf34cc05745fe91f4a90efc8474a2-4-1005-test-run1" />
+                <property name="TestContainerUuidProp" value="4-1008_5f4ecf4d3f7c43989c62f2dd4372430b-4-1005-run1-container" />
+                <property name="TestUuidProp" value="4-1008_5f4ecf4d3f7c43989c62f2dd4372430b-4-1005-test-run1" />
                 <property name="FixtureUuidProp" value="Task_50.Tests.Task_50_tutBy-fixture" />
                 <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
                 <property name="CurrentTestSetupFixtureProp" value="" />
@@ -206,7 +317,7 @@
               </properties>
               <attachments>
                 <attachment>
-                  <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_DDT_Successfull___seleniumtests2@tut.by___seleniumtests2@tut.by_123456789zxcvbn_02132019_023541.png</filePath>
+                  <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_DDT_Successfull___seleniumtests2@tut.by___seleniumtests2@tut.by_123456789zxcvbn_02132019_044933.png</filePath>
                   <description><![CDATA[My Screenshot]]></description>
                 </attachment>
               </attachments>
@@ -216,7 +327,7 @@
       </test-suite>
     </test-suite>
   </test-suite>
-  <test-suite type="Assembly" id="5-1004" name="Task_70.dll" fullname="Task_70.dll" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-12 23:35:46Z" end-time="2019-02-12 23:36:09Z" duration="22.990122" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+  <test-suite type="Assembly" id="5-1004" name="Task_70.dll" fullname="Task_70.dll" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-13 13:49:39Z" end-time="2019-02-13 13:50:01Z" duration="22.828497" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
     <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools" machine-name="GUSEVG10" user="GlebGusev" user-domain="BY-MINSK" culture="en-US" uiculture="en-US" os-architecture="x86" />
     <settings>
       <setting name="ProcessModel" value="Multiple" />
@@ -233,21 +344,21 @@
       <setting name="NumberOfTestWorkers" value="8" />
     </settings>
     <properties>
-      <property name="_PID" value="16020" />
+      <property name="_PID" value="22964" />
       <property name="_APPDOMAIN" value="domain-eee82dfe-Task_70.dll" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="5-1005" name="Task_70" fullname="Task_70" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-12 23:35:46Z" end-time="2019-02-12 23:36:09Z" duration="22.979257" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="TestSuite" id="5-1005" name="Task_70" fullname="Task_70" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-13 13:49:39Z" end-time="2019-02-13 13:50:01Z" duration="22.817295" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestSuite" id="5-1006" name="Tests" fullname="Task_70.Tests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-12 23:35:46Z" end-time="2019-02-12 23:36:09Z" duration="22.978980" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="5-1006" name="Tests" fullname="Task_70.Tests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-13 13:49:39Z" end-time="2019-02-13 13:50:01Z" duration="22.817008" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-suite type="TestFixture" id="5-1000" name="Task_70" fullname="Task_70.Tests.Task_70" classname="Task_70.Tests.Task_70" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-12 23:35:46Z" end-time="2019-02-12 23:36:09Z" duration="22.976936" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestFixture" id="5-1000" name="Task_70" fullname="Task_70.Tests.Task_70" classname="Task_70.Tests.Task_70" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2019-02-13 13:49:39Z" end-time="2019-02-13 13:50:01Z" duration="22.814852" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
           <properties>
             <property name="FixtureUuidProp" value="Task_70.Tests.Task_70-fixture" />
             <property name="AllTestsInFixtureProp" value="System.Collections.Concurrent.ConcurrentBag`1[System.ValueTuple`3[System.String,System.String,System.String]]" />
@@ -258,10 +369,10 @@
           <failure>
             <message><![CDATA[One or more child tests had errors]]></message>
           </failure>
-          <test-case id="5-1002" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_70.Tests.Task_70.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1403073913" result="Passed" start-time="2019-02-12 23:35:46Z" end-time="2019-02-12 23:35:53Z" duration="6.828369" asserts="0">
+          <test-case id="5-1002" name="LoginTutBy_CorrectCredentials_Successfull" fullname="Task_70.Tests.Task_70.LoginTutBy_CorrectCredentials_Successfull" methodname="LoginTutBy_CorrectCredentials_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1864193329" result="Passed" start-time="2019-02-13 13:49:39Z" end-time="2019-02-13 13:49:46Z" duration="7.010354" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="5-1002_a82c250933544a88895083851ea62a05-5-1000-run1-container" />
-              <property name="TestUuidProp" value="5-1002_a82c250933544a88895083851ea62a05-5-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="5-1002_1331edb89cbd480e897ed566938b6d74-5-1000-run1-container" />
+              <property name="TestUuidProp" value="5-1002_1331edb89cbd480e897ed566938b6d74-5-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_70.Tests.Task_70-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
@@ -270,15 +381,15 @@
             </properties>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_CorrectCredentials_Successfull_02132019_023551.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LoginTutBy_CorrectCredentials_Successfull_02132019_044944.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
-          <test-case id="5-1003" name="LogoutTutBy_ClickLogoutLink_Successfull" fullname="Task_70.Tests.Task_70.LogoutTutBy_ClickLogoutLink_Successfull" methodname="LogoutTutBy_ClickLogoutLink_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1597062940" result="Passed" start-time="2019-02-12 23:35:53Z" end-time="2019-02-12 23:36:01Z" duration="7.786547" asserts="0">
+          <test-case id="5-1003" name="LogoutTutBy_ClickLogoutLink_Successfull" fullname="Task_70.Tests.Task_70.LogoutTutBy_ClickLogoutLink_Successfull" methodname="LogoutTutBy_ClickLogoutLink_Successfull" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="639263404" result="Passed" start-time="2019-02-13 13:49:46Z" end-time="2019-02-13 13:49:54Z" duration="8.053325" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="5-1003_93feae8807514d90965f8c818857a20f-5-1000-run1-container" />
-              <property name="TestUuidProp" value="5-1003_93feae8807514d90965f8c818857a20f-5-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="5-1003_c2a45575f15247aa8e734d677058acf9-5-1000-run1-container" />
+              <property name="TestUuidProp" value="5-1003_c2a45575f15247aa8e734d677058acf9-5-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_70.Tests.Task_70-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
@@ -287,15 +398,15 @@
             </properties>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LogoutTutBy_ClickLogoutLink_Successfull_02132019_023558.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\LogoutTutBy_ClickLogoutLink_Successfull_02132019_044952.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
           </test-case>
-          <test-case id="5-1001" name="Task90_LoginTutByWrongCredentials_Failed" fullname="Task_70.Tests.Task_70.Task90_LoginTutByWrongCredentials_Failed" methodname="Task90_LoginTutByWrongCredentials_Failed" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1356076328" result="Failed" start-time="2019-02-12 23:36:01Z" end-time="2019-02-12 23:36:09Z" duration="8.070775" asserts="0">
+          <test-case id="5-1001" name="Task90_LoginTutByWrongCredentials_Failed" fullname="Task_70.Tests.Task_70.Task90_LoginTutByWrongCredentials_Failed" methodname="Task90_LoginTutByWrongCredentials_Failed" classname="Task_70.Tests.Task_70" runstate="Runnable" seed="1988030976" result="Failed" start-time="2019-02-13 13:49:54Z" end-time="2019-02-13 13:50:01Z" duration="7.459380" asserts="0">
             <properties>
-              <property name="TestContainerUuidProp" value="5-1001_7bbbeb357cd24293b32a543862f7ec26-5-1000-run1-container" />
-              <property name="TestUuidProp" value="5-1001_7bbbeb357cd24293b32a543862f7ec26-5-1000-test-run1" />
+              <property name="TestContainerUuidProp" value="5-1001_4365078441e54df0a8b98a81f00166c3-5-1000-run1-container" />
+              <property name="TestUuidProp" value="5-1001_4365078441e54df0a8b98a81f00166c3-5-1000-test-run1" />
               <property name="FixtureUuidProp" value="Task_70.Tests.Task_70-fixture" />
               <property name="TestAssertsProp" value="System.Collections.Generic.List`1[System.Exception]" />
               <property name="CurrentTestSetupFixtureProp" value="" />
@@ -318,11 +429,11 @@
             </assertions>
             <attachments>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Task90_LoginTutByWrongCredentials_Failed_02132019_023606.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Task90_LoginTutByWrongCredentials_Failed_02132019_044959.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
               <attachment>
-                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Failed\Task90_LoginTutByWrongCredentials_Failed_02132019_023608.png</filePath>
+                <filePath>C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Screenshots\Failed\Task90_LoginTutByWrongCredentials_Failed_02132019_045001.png</filePath>
                 <description><![CDATA[My Screenshot]]></description>
               </attachment>
             </attachments>
