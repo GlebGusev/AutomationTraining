@@ -7,6 +7,7 @@ namespace Task_20.Tests
 {
     [TestFixture]
     [AllureSuite("Task_20 tests")]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class Task_20 : TestBase
     {
         private Locators.Locators _locators;
@@ -30,7 +31,7 @@ namespace Task_20.Tests
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(Driver, _startPage);
 
             //Enter credentials
             Driver.FindElement(_locators.enterLink).Click();

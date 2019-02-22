@@ -1,50 +1,57 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using Allure.Commons;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
 
 namespace Initialize
 {
+    [Parallelizable]
     public abstract class TestBase : AllureReport
     {
         public IWebDriver Driver;
-        private static readonly string ResultFolder = Path.Combine(Initialize.TryGetSolutionDirectoryInfo().FullName, @"TestResults\");
+        private ChromeOptions options;
+        private static readonly string ResultFolder = Path.Combine(TryGetSolutionDirectoryInfo().FullName, @"TestResults\");
         private readonly string[] _resultFolders = Directory.GetDirectories(ResultFolder);
         private static readonly string TargetPath = Path.Combine(ResultFolder, @"FInalResult\", DateTime.Now.ToString("yyyy-MM-dd"));
 
         [SetUp]
         public virtual void TestSetup()
         {
-            KillDriver();
             AllureLifecycle.Instance.RunStep(() =>
             {
                 TestContext.Progress.WriteLine($"Test \"{TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is starting...");
             });
-            Driver = new ChromeDriver(chromeDriverDirectory: Initialize.GetDriverFolder());
-            Driver.Manage().Window.Maximize();
+            options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+            Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options);
+            //Driver = new ChromeDriver(GetDriverFolder(), options);
         }
 
         [TearDown]
         public void TestCleanup()
         {
             ScreenshotOnFailure();
-            Driver.Quit();
             AllureLifecycle.Instance.RunStep(() =>
             {
                 TestContext.Progress.WriteLine(
                     $"Test {TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is stopping...");
             });
-            KillDriver();
+            Driver.Quit(); //fails test in parallel. need to add driver factory
         }
 
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
+            KillDriver();
+
             //Merge all Allure json files in one folder
             if (!Directory.Exists(TargetPath)) Directory.CreateDirectory(TargetPath);
 
@@ -66,7 +73,7 @@ namespace Initialize
         private void ScreenshotOnFailure()
         {
             if(TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
-                Initialize.MakeScreenshot(Driver, @"TestResults\Screenshots\Failed\");
+                MakeScreenshot(Driver, @"TestResults\Screenshots\Failed\");
         }
 
         private void KillDriver()
@@ -79,6 +86,56 @@ namespace Initialize
                     driver.Kill();
                 }
             }
+        }
+
+        public void MakeScreenshot(IWebDriver driver, string saveTo)
+        {
+            var ss = ((ITakesScreenshot)driver).GetScreenshot();
+
+            var testArguments = TestContext.CurrentContext.Test.Arguments;
+            var argumentsString = string.Empty;
+
+            if (testArguments.Length > 0)
+            {
+                argumentsString = "_";
+                foreach (var argument in testArguments)
+                {
+                    argumentsString += argumentsString + "_" + argument;
+                }
+            }
+
+            var screenshotFile = Path.Combine(Path.Combine(TryGetSolutionDirectoryInfo().FullName, saveTo)
+                , TestContext.CurrentContext.Test.MethodName + argumentsString + "_" + DateTime.Now.ToString("MMddyyyy_hhmmss") + ".png");
+            ss.SaveAsFile(screenshotFile, ScreenshotImageFormat.Png);
+
+            TestContext.AddTestAttachment(screenshotFile, "My Screenshot");
+        }
+
+        public static DirectoryInfo TryGetSolutionDirectoryInfo()
+        {
+            var directory = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+            while (directory != null && !directory.GetFiles("*.sln").Any())
+            {
+                directory = directory.Parent;
+            }
+
+            return directory;
+        }
+
+        public string GetDriverFolder()
+        {
+            var solutionPath = TryGetSolutionDirectoryInfo().FullName;
+
+            return Path.Combine(solutionPath, @"Drivers\");
+        }
+
+        public void LaunchBrowser(IWebDriver driver, Uri startPage)
+        {
+            driver.Navigate().GoToUrl(startPage);
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            wait.Until(condition => driver.Url.Contains(startPage.ToString()));
+
+            MakeScreenshot(driver, @"TestResults\Screenshots\");
         }
     }
 }

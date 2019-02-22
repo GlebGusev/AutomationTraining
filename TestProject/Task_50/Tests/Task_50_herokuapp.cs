@@ -10,6 +10,7 @@ namespace Task_50.Tests
 {
     [TestFixture]
     [AllureSuite("Task_50_hero tests")]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class Task_50_herokuapp : TestBase
     {
         private Locators.HerokuappLocators _locators;
@@ -34,7 +35,7 @@ namespace Task_50.Tests
         public void Herokuapp_AddTextToFrame_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPageFrame);
+            LaunchBrowser(Driver, _startPageFrame);
 
             //FInd Frame and clear
             var frameWindow = Driver.FindElement(_locators.frameWindow);
@@ -72,7 +73,7 @@ namespace Task_50.Tests
         public void Herokuapp_Alert_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPageAlert);
+            LaunchBrowser(Driver, _startPageAlert);
 
             //Accept Alert
             _locators.WaitForElementDisplayed(Driver, _locators.clickForJSAlertButton);
@@ -91,7 +92,7 @@ namespace Task_50.Tests
         public void Herokuapp_Confirm_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPageAlert);
+            LaunchBrowser(Driver, _startPageAlert);
 
             //Cancel Confirm
             _locators.WaitForElementDisplayed(Driver, _locators.clickForJSConfirmButton);
@@ -117,7 +118,7 @@ namespace Task_50.Tests
         public void Herokuapp_Prompt_Added()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPageAlert);
+            LaunchBrowser(Driver, _startPageAlert);
 
             //Cancel Prompt
             _locators.WaitForElementDisplayed(Driver, _locators.clickForJSPromptButton);

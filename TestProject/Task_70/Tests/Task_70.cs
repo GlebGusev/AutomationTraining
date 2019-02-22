@@ -8,6 +8,7 @@ namespace Task_70.Tests
 {
     [TestFixture]
     [AllureSuite("Task_70 tests")]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class Task_70 : TestBase
     {
         private Locators.PageFactory _locators;
@@ -33,13 +34,15 @@ namespace Task_70.Tests
             var username = "seleniumtests444@tut.by";
 
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(Driver, _startPage);
 
             //Enter credentials
             _locators.PerformAutorization(username, _password);
 
             //Validate user logged in
             _locators.AssertLoggedIn();
+
+            Driver.Quit();
         }
 
         [Test]
@@ -50,14 +53,9 @@ namespace Task_70.Tests
         [AllureOwner("Gleb")]
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
-            //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
+            LoginToAccount();
 
-            //Enter credentials
-            _locators.PerformAutorization(_username, _password);
-
-            //Validate user logged in
-            _locators.AssertLoggedIn();
+            Driver.Quit();
         }
 
         [Test]
@@ -69,13 +67,27 @@ namespace Task_70.Tests
         public void LogoutTutBy_ClickLogoutLink_Successfull()
         {
             //Login
-            LoginTutBy_CorrectCredentials_Successfull();
+            LoginToAccount();
 
             //Logout
             _locators.PerformLogOut();
 
             //Validate user logged out
             _locators.AssertLoggedOut();
+
+            Driver.Quit();
+        }
+
+        private void LoginToAccount()
+        {
+            //Open start page
+            LaunchBrowser(Driver, _startPage);
+
+            //Enter credentials
+            _locators.PerformAutorization(_username, _password);
+
+            //Validate user logged in
+            _locators.AssertLoggedIn();
         }
     }
 }

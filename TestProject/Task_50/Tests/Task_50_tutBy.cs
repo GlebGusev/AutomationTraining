@@ -10,6 +10,7 @@ namespace Task_50.Tests
 {
     [TestFixture]
     [AllureSuite("Task_50 tests")]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class Task_50_tutBy : TestBase
     {
         private Locators.TutByLocators _locators;
@@ -34,7 +35,7 @@ namespace Task_50.Tests
         public void LoginTutBy_CorrectCredentialsAndWait_Successfull()
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(Driver, _startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
@@ -69,7 +70,7 @@ namespace Task_50.Tests
         public bool LoginTutBy_DDT_Successfull(string userName, string password)
         {
             //Open start page
-            Initialize.Initialize.LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(Driver, _startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
