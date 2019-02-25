@@ -1,0 +1,65 @@
+{
+  "uuid": "4-1006_aec5618655514f4fae064a69d033b6fa-4-1005-test-run1",
+  "historyId": "Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull",
+  "fullName": "Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull",
+  "labels": [
+    {
+      "name": "host",
+      "value": "GUSEVG10"
+    },
+    {
+      "name": "testClass",
+      "value": "Task_50.Tests.Task_50_tutBy"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginTutBy_CorrectCredentialsAndWait_Successfull"
+    },
+    {
+      "name": "package",
+      "value": "Task_50.Tests.Task_50_tutBy"
+    },
+    {
+      "name": "suite",
+      "value": "Task_50 tests"
+    },
+    {
+      "name": "subSuite",
+      "value": "LoginTutBy"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "Gleb"
+    },
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    }
+  ],
+  "links": [
+    {
+      "name": "2",
+      "url": "2",
+      "type": "mylink"
+    }
+  ],
+  "name": "LoginTutBy_CorrectCredentialsAndWait_Successfull",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\TestResults\\Screenshots\\LoginTutBy_CorrectCredentialsAndWait_Successfull_02262019_125949.png'.\r\nTearDown : System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\TestResults\\Screenshots\\Failed\\LoginTutBy_CorrectCredentialsAndWait_Successfull_02262019_125950.png'.",
+    "trace": "   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.TestBase.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 118\r\n   at Initialize.TestBase.LaunchBrowser(IWebDriver driver, Uri startPage) in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 147\r\n   at Task_50.Tests.Task_50_tutBy.LoginTutBy_CorrectCredentialsAndWait_Successfull() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Task_50\\Tests\\Task_50_tutBy.cs:line 38\r\n--TearDown\r\n   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.TestBase.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 118\r\n   at Initialize.TestBase.ScreenshotOnFailure() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 85\r\n   at Initialize.TestBase.TestCleanup() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 40"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1551131981992,
+  "stop": 1551131990095
+}

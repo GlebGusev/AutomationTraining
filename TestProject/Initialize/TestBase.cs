@@ -43,7 +43,8 @@ namespace Initialize
                 TestContext.Progress.WriteLine(
                     $"Test {TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is stopping...");
             });
-            Driver.Quit(); //fails test in parallel. need to add driver factory
+            KillDriver();
+            //Driver.Quit(); //fails test in parallel. need to add driver factory
         }
 
         [OneTimeTearDown]

@@ -1,0 +1,74 @@
+{
+  "uuid": "4-1007_fb7c2020da7e4b3d84503f8177abd793-4-1005-test-run1",
+  "historyId": "Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(\"seleniumtests@tut.by\",\"123456789zxcvbn\") (\"seleniumtests@tut.by\", \"123456789zxcvbn\")",
+  "fullName": "Task_50.Tests.Task_50_tutBy.LoginTutBy_DDT_Successfull(\"seleniumtests@tut.by\",\"123456789zxcvbn\") (\"seleniumtests@tut.by\", \"123456789zxcvbn\")",
+  "labels": [
+    {
+      "name": "host",
+      "value": "GUSEVG10"
+    },
+    {
+      "name": "testClass",
+      "value": "Task_50.Tests.Task_50_tutBy"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginTutBy_DDT_Successfull"
+    },
+    {
+      "name": "package",
+      "value": "Task_50.Tests.Task_50_tutBy"
+    },
+    {
+      "name": "suite",
+      "value": "Task_50 tests"
+    },
+    {
+      "name": "subSuite",
+      "value": "LoginTutBy"
+    },
+    {
+      "name": "severity",
+      "value": "minor"
+    },
+    {
+      "name": "owner",
+      "value": "Gleb"
+    },
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    }
+  ],
+  "links": [
+    {
+      "name": "3",
+      "url": "3",
+      "type": "mylink"
+    }
+  ],
+  "name": "LoginTutBy_DDT_Successfull(\"seleniumtests@tut.by\",\"123456789zxcvbn\")",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://10.10.22.95:4444/wd/hub/session timed out after 60 seconds.\r\n  ----> System.Net.WebException : The request was aborted: The operation has timed out.\r\nTearDown : System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\TestResults\\Screenshots\\Failed\\LoginTutBy_DDT_Successfull___seleniumtests@tut.by___seleniumtests@tut.by_123456789zxcvbn_02262019_010050.png'.",
+    "trace": "   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, DriverOptions options)\r\n   at Initialize.TestBase.TestSetup() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 33\r\n   at Task_50.Tests.Task_50_tutBy.TestSetup() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Task_50\\Tests\\Task_50_tutBy.cs:line 24\r\n--WebException\r\n   at System.Net.HttpWebRequest.GetResponse()\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)\r\n--TearDown\r\n   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)\r\n   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)\r\n   at System.IO.FileStream..ctor(String path, FileMode mode)\r\n   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)\r\n   at Initialize.TestBase.MakeScreenshot(IWebDriver driver, String saveTo) in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 118\r\n   at Initialize.TestBase.ScreenshotOnFailure() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 85\r\n   at Initialize.TestBase.TestCleanup() in C:\\Program Files (x86)\\Jenkins\\workspace\\Run Nunit\\TestProject\\Initialize\\TestBase.cs:line 40"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Parameter #1, String",
+      "value": "seleniumtests@tut.by"
+    },
+    {
+      "name": "Parameter #2, String",
+      "value": "123456789zxcvbn"
+    }
+  ],
+  "start": 1551131990099,
+  "stop": 1551132050394
+}
