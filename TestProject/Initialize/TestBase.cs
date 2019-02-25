@@ -31,7 +31,7 @@ namespace Initialize
             });
             options = new ChromeOptions();
             options.AddArgument("--start-maximized");
-            Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options);
+            Driver = new RemoteWebDriver(new Uri("http://10.10.22.95:4444/wd/hub"), options);
             //Driver = new ChromeDriver(GetDriverFolder(), options);
         }
 
