@@ -20,7 +20,8 @@ namespace Initialize
         private ChromeOptions options;
         private static readonly string ResultFolder = Path.Combine(TryGetSolutionDirectoryInfo().FullName, @"TestResults\");
         private readonly string[] _resultFolders = Directory.GetDirectories(ResultFolder);
-        
+        private const string JenkinsAllure = @"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results";
+
         [SetUp]
         public virtual void TestSetup()
         {
@@ -73,6 +74,7 @@ namespace Initialize
             }
 
             //Copy to Jenkins allure result
+            if(!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
             var files = Directory.GetFiles(targetPath);
             foreach (var file in files)
             {
