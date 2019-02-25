@@ -20,8 +20,7 @@ namespace Initialize
         private ChromeOptions options;
         private static readonly string ResultFolder = Path.Combine(TryGetSolutionDirectoryInfo().FullName, @"TestResults\");
         private readonly string[] _resultFolders = Directory.GetDirectories(ResultFolder);
-        private static readonly string TargetPath = Path.Combine(ResultFolder, @"FInalResult\", DateTime.Now.ToString("yyyy-MM-dd"));
-
+        
         [SetUp]
         public virtual void TestSetup()
         {
@@ -53,7 +52,8 @@ namespace Initialize
             KillDriver();
 
             //Merge all Allure json files in one folder
-            if (!Directory.Exists(TargetPath)) Directory.CreateDirectory(TargetPath);
+            var targetPath = Path.Combine(ResultFolder, @"FInalResult\", DateTime.Now.ToString("yyyy-MM-dd"));
+            if (!Directory.Exists(targetPath)) Directory.CreateDirectory(targetPath);
 
             foreach (var folder in _resultFolders)
             {
@@ -63,7 +63,7 @@ namespace Initialize
                     foreach (var file in filesInFolder)
                     {
                         var fileName = Path.GetFileName(file);
-                        var destFile = Path.Combine(TargetPath, fileName);
+                        var destFile = Path.Combine(targetPath, fileName);
                         File.Copy(file, destFile, true);
                     }
                 }
