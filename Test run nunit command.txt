@@ -3,7 +3,7 @@ NUNIT
 --------------------------------------------------------------------------------------------
 cd C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\packages\NUnit.ConsoleRunner.3.9.0\tools
 
-nunit3-console C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple --workers=4
+nunit3-console C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\NunitRunConfig.nunit --x86 --dispose-runners --process=Multiple --workers=2
 --------------------------------------------------------------------------------------------
 
 ALLURE
@@ -24,6 +24,9 @@ http://localhost:4444/grid/console
 LOCAL
 
 java -Dwebdriver.chrome.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\chromedriver.exe" -jar selenium_server_standalone_3.141.59.jar -role node -nodeConfig localnodeconfig.json
+
+Jenkins
+-hub http://localhost:4444/grid/register
 
 -Dwebdriver.ie.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\IEDriverServer.exe" -browser "browserName=internet explorer,version=11,maxInstances=5,seleniumProtocol=WebDriver" 
 -Dwebdriver.chrome.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\chromedriver.exe" -browser "browserName=chrome,version=latest,maxSession=3,seleniumProtocol=WebDriver" 

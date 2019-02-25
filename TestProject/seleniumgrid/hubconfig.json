@@ -1,6 +1,6 @@
 {
   "host": null,
-  "port": 4444,
+  "port": 4445,
   "newSessionWaitTimeout": -1,
   "newSessionMaxWaitTimeInSeconds": 250,
   "servlets" : [],

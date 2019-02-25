@@ -16,10 +16,10 @@
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
     "maxSession": 1,
     "port": 5555,
-    "host": "10.64.100.118",
+    "host": "192.168.73.129",
     "register": true,
     "registerCycle": 5000,
     "hubPort": 4444
-    "hubHost" : "10.64.100.210"
+    "hubHost" : "10.10.22.95"
   }
 }

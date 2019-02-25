@@ -9,17 +9,16 @@
 		},
         {
           "browserName": "chrome",
-          "maxInstances": 2,
+          "maxInstances": 1,
           "seleniumProtocol": "WebDriver"
         }
       ],
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
     "maxSession": 10,
-    "port": 5555,
-    "host": "10.64.100.210",
+    "host": "10.10.22.95",
     "register": true,
     "registerCycle": 5000,
     "hubPort": 4444,
-    "hubHost": "10.64.100.210"
+    "hubHost": "10.10.22.95"
   }
 }
