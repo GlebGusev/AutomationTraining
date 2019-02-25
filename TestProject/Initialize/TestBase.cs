@@ -24,6 +24,8 @@ namespace Initialize
         [SetUp]
         public virtual void TestSetup()
         {
+            Driver.Quit();
+            KillDriver();
             AllureLifecycle.Instance.RunStep(() =>
             {
                 TestContext.Progress.WriteLine($"Test \"{TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is starting...");
@@ -43,8 +45,8 @@ namespace Initialize
                 TestContext.Progress.WriteLine(
                     $"Test {TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is stopping...");
             });
+            Driver.Quit(); //fails test in parallel. need to add driver factory
             KillDriver();
-            //Driver.Quit(); //fails test in parallel. need to add driver factory
         }
 
         [OneTimeTearDown]
@@ -70,14 +72,14 @@ namespace Initialize
                 }
             }
 
-            ////Copy to Jenkins allure result
-            //var files = Directory.GetFiles(TargetPath);
-            //foreach (var file in files)
-            //{
-            //    var fileName = Path.GetFileName(file);
-            //    var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
-            //    File.Copy(file, destFile, true);
-            //}
+            //Copy to Jenkins allure result
+            var files = Directory.GetFiles(targetPath);
+            foreach (var file in files)
+            {
+                var fileName = Path.GetFileName(file);
+                var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
+                File.Copy(file, destFile, true);
+            }
         }
 
         private void ScreenshotOnFailure()
