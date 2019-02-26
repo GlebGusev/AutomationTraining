@@ -19,6 +19,9 @@ namespace Initialize
         public IWebDriver Driver;
         private ChromeOptions options;
         private static readonly string ResultFolder = Path.Combine(TryGetSolutionDirectoryInfo().FullName, @"TestResults\");
+        private static readonly string ScreenshotFolder = Path.Combine(ResultFolder, @"Screenshots\");
+        private static readonly string FailedFolder = Path.Combine(ScreenshotFolder, @"Screenshots\");
+        private static readonly string TargetPath = Path.Combine(ResultFolder, @"FinalResult\", DateTime.Now.ToString("yyyy-MM-dd"));
         private readonly string[] _resultFolders = Directory.GetDirectories(ResultFolder);
         private const string JenkinsAllure = @"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results";
 
@@ -65,15 +68,21 @@ namespace Initialize
             KillDriver();
         }
 
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            if (!Directory.Exists(ScreenshotFolder)) Directory.CreateDirectory(ScreenshotFolder);
+            if (!Directory.Exists(FailedFolder)) Directory.CreateDirectory(FailedFolder);
+            if (!Directory.Exists(TargetPath)) Directory.CreateDirectory(TargetPath);
+            if (!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
+        }
+
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
             KillDriver();
 
             //Merge all Allure json files in one folder
-            var targetPath = Path.Combine(ResultFolder, @"FInalResult\", DateTime.Now.ToString("yyyy-MM-dd"));
-            if (!Directory.Exists(targetPath)) Directory.CreateDirectory(targetPath);
-
             foreach (var folder in _resultFolders)
             {
                 if (folder.Contains("_result"))
@@ -82,27 +91,26 @@ namespace Initialize
                     foreach (var file in filesInFolder)
                     {
                         var fileName = Path.GetFileName(file);
-                        var destFile = Path.Combine(targetPath, fileName);
+                        var destFile = Path.Combine(TargetPath, fileName);
                         File.Copy(file, destFile, true);
                     }
                 }
             }
 
-            ////Copy to Jenkins allure result
-            //if(!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
-            //var files = Directory.GetFiles(targetPath);
-            //foreach (var file in files)
-            //{
-            //    var fileName = Path.GetFileName(file);
-            //    var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
-            //    File.Copy(file, destFile, true);
-            //}
+            //Copy to Jenkins allure result
+            var files = Directory.GetFiles(TargetPath);
+            foreach (var file in files)
+            {
+                var fileName = Path.GetFileName(file);
+                var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
+                File.Copy(file, destFile, true);
+            }
         }
 
         private void ScreenshotOnFailure()
         {
             if(TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
-                MakeScreenshot(Driver, @"TestResults\Screenshots\Failed\");
+                MakeScreenshot(Driver, FailedFolder);
         }
 
         private void KillDriver()
@@ -164,7 +172,7 @@ namespace Initialize
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             wait.Until(condition => driver.Url.Contains(startPage.ToString()));
 
-            MakeScreenshot(driver, @"TestResults\Screenshots\");
+            MakeScreenshot(driver, ScreenshotFolder);
         }
     }
 }
