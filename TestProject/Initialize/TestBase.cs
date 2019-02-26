@@ -25,8 +25,6 @@ namespace Initialize
         [SetUp]
         public virtual void TestSetup()
         {
-            Driver.Quit();
-            KillDriver();
             AllureLifecycle.Instance.RunStep(() =>
             {
                 TestContext.Progress.WriteLine($"Test \"{TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is starting...");
