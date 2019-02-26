@@ -33,8 +33,25 @@ namespace Initialize
             });
             options = new ChromeOptions();
             options.AddArgument("--start-maximized");
-            Driver = new RemoteWebDriver(new Uri("http://10.10.22.95:4444/wd/hub"), options);
-            //Driver = new ChromeDriver(GetDriverFolder(), options);
+            //var capabilities = new DesiredCapabilities();
+            //capabilities.SetCapability("username", "");
+            //capabilities.SetCapability("accessKey", "");
+
+            //capabilities.SetCapability("browserName", "MicrosoftEdge");
+            //capabilities.SetCapability("platform", "Windows 10");
+            //capabilities.SetCapability("version", "16.16299");
+
+            //capabilities.SetCapability("browserName", "Firefox");
+            //capabilities.SetCapability("platform", "Windows 8.1");
+            //capabilities.SetCapability("version", "39.0");
+
+            //capabilities.SetCapability("browserName", "Chrome");
+            //capabilities.SetCapability("platform", "Linux");
+            //capabilities.SetCapability("version", "40.0");
+
+            //Driver = new RemoteWebDriver(new Uri("https://ondemand.saucelabs.com/wd/hub"), capabilities);
+            //Driver = new RemoteWebDriver(new Uri("http://10.10.22.95:4444/wd/hub"), options);
+            Driver = new ChromeDriver(GetDriverFolder(), options);
         }
 
         [TearDown]
@@ -73,15 +90,15 @@ namespace Initialize
                 }
             }
 
-            //Copy to Jenkins allure result
-            if(!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
-            var files = Directory.GetFiles(targetPath);
-            foreach (var file in files)
-            {
-                var fileName = Path.GetFileName(file);
-                var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
-                File.Copy(file, destFile, true);
-            }
+            ////Copy to Jenkins allure result
+            //if(!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
+            //var files = Directory.GetFiles(targetPath);
+            //foreach (var file in files)
+            //{
+            //    var fileName = Path.GetFileName(file);
+            //    var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
+            //    File.Copy(file, destFile, true);
+            //}
         }
 
         private void ScreenshotOnFailure()
