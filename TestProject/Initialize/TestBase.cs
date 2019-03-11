@@ -24,6 +24,7 @@ namespace Initialize
         private static readonly string TargetPath = Path.Combine(ResultFolder, @"FinalResult\", DateTime.Now.ToString("yyyy-MM-dd"));
         private readonly string[] _resultFolders = Directory.GetDirectories(ResultFolder);
         private const string JenkinsAllure = @"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results";
+        private const string TeamCityAllure = @"C:\TeamCity\buildAgent\work\357d8625a94da553\TestProject\TestResults\FinalResult";
 
         [SetUp]
         public virtual void TestSetup()
@@ -79,7 +80,7 @@ namespace Initialize
             if (!Directory.Exists(ScreenshotFolder)) Directory.CreateDirectory(ScreenshotFolder);
             if (!Directory.Exists(FailedFolder)) Directory.CreateDirectory(FailedFolder);
             if (!Directory.Exists(TargetPath)) Directory.CreateDirectory(TargetPath);
-            if (!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
+            //if (!Directory.Exists(JenkinsAllure)) Directory.CreateDirectory(JenkinsAllure);
         }
 
         [OneTimeTearDown]
@@ -102,14 +103,15 @@ namespace Initialize
                 }
             }
 
-            ////Copy to Jenkins allure result
-            //var files = Directory.GetFiles(TargetPath);
-            //foreach (var file in files)
-            //{
-            //    var fileName = Path.GetFileName(file);
-            //    var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
-            //    File.Copy(file, destFile, true);
-            //}
+            //Copy to Jenkins or TeamCity allure result
+            var files = Directory.GetFiles(TargetPath);
+            foreach (var file in files)
+            {
+                var fileName = Path.GetFileName(file);
+                //var destFile = Path.Combine(JenkinsAllure, fileName);
+                var destFile = Path.Combine(TeamCityAllure, fileName);
+                File.Copy(file, destFile, true);
+            }
         }
 
         private void ScreenshotOnFailure()
