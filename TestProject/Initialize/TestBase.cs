@@ -32,12 +32,17 @@ namespace Initialize
             {
                 TestContext.Progress.WriteLine($"Test \"{TestExecutionContext.CurrentContext.CurrentTest.FullName}\" is starting...");
             });
-            //options = new ChromeOptions();
-            //options.AddArgument("--start-maximized");
 
-            var capabilities = new DesiredCapabilities();
-            capabilities.SetCapability("username", "glebabee");
-            capabilities.SetCapability("accessKey", "ea9def77-f807-4247-9cfd-bb98c26d45b4");
+            options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+            //Driver = new RemoteWebDriver(new Uri("http://10.10.22.95:4444/wd/hub"), options); //Jenkins
+            Driver = new RemoteWebDriver(new Uri("http://10.10.22.95:4445/wd/hub"), options); //TeamCity
+            //Driver = new ChromeDriver(GetDriverFolder(), options);
+
+            #region SauceLabs
+            //var capabilities = new DesiredCapabilities();
+            //capabilities.SetCapability("username", "glebabee");
+            //capabilities.SetCapability("accessKey", "ea9def77-f807-4247-9cfd-bb98c26d45b4");
 
             //capabilities.SetCapability("browserName", "MicrosoftEdge");
             //capabilities.SetCapability("platform", "Windows 10");
@@ -47,14 +52,12 @@ namespace Initialize
             //capabilities.SetCapability("platform", "Windows 8.1");
             //capabilities.SetCapability("version", "39.0");
 
-            capabilities.SetCapability("browserName", "Chrome");
-            capabilities.SetCapability("platform", "Linux");
-            capabilities.SetCapability("version", "40.0");
+            //capabilities.SetCapability("browserName", "Chrome");
+            //capabilities.SetCapability("platform", "Linux");
+            //capabilities.SetCapability("version", "40.0");
 
-            Driver = new RemoteWebDriver(new Uri("https://ondemand.saucelabs.com/wd/hub"), capabilities);
-
-            //Driver = new RemoteWebDriver(new Uri("http://10.10.22.95:4444/wd/hub"), options);
-            //Driver = new ChromeDriver(GetDriverFolder(), options);
+            //Driver = new RemoteWebDriver(new Uri("https://ondemand.saucelabs.com/wd/hub"), capabilities);
+            #endregion SauceLabs
         }
 
         [TearDown]
@@ -99,14 +102,14 @@ namespace Initialize
                 }
             }
 
-            //Copy to Jenkins allure result
-            var files = Directory.GetFiles(TargetPath);
-            foreach (var file in files)
-            {
-                var fileName = Path.GetFileName(file);
-                var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
-                File.Copy(file, destFile, true);
-            }
+            ////Copy to Jenkins allure result
+            //var files = Directory.GetFiles(TargetPath);
+            //foreach (var file in files)
+            //{
+            //    var fileName = Path.GetFileName(file);
+            //    var destFile = Path.Combine(@"C:\Program Files (x86)\Jenkins\workspace\Run Nunit\allure-results", fileName);
+            //    File.Copy(file, destFile, true);
+            //}
         }
 
         private void ScreenshotOnFailure()
