@@ -1,6 +1,6 @@
 ﻿{
   "allure": {
-    "directory": "C:/Program Files (x86)/Jenkins/workspace/Run Nunit/TestProject/TestResults/Task_50_results",
+    "directory": "C:/TeamCity/buildAgent/work/357d8625a94da553/TestProject/TestResults/Task_50_results",
     "allowEmptySuites": true,
     "enableParameters": true,
     "allowLocalHistoryTrend": false
