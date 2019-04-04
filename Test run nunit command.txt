@@ -10,12 +10,12 @@ ALLURE
 --------------------------------------------------------------------------------------------
 cd C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\allure-commandline-2.9.0\allure-2.9.0\bin
 
-allure serve C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\FInalResult
+allure serve C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\TestResults\Task_Final_results
 --------------------------------------------------------------------------------------------
 
 SELENIUM GRID
 --------------------------------------------------------------------------------------------
-cd C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\seleniumgrid
+cd C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers
 
 java -jar selenium_server_standalone_3.141.59.jar -role hub -hubConfig hubconfig.json
 
@@ -23,14 +23,11 @@ http://localhost:4444/grid/console
 
 LOCAL
 
-java -Dwebdriver.chrome.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\chromedriver.exe" -jar selenium_server_standalone_3.141.59.jar -role node -nodeConfig localnodeconfig.json
+java -Dwebdriver.chrome.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\chromedriver.exe" -Dwebdirver.gecko.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\geckodriver.exe" -jar selenium_server_standalone_3.141.59.jar -role node -nodeConfig localnodeconfig.json
 
 Jenkins
 -hub http://localhost:4444/grid/register
 
--Dwebdriver.ie.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\IEDriverServer.exe" -browser "browserName=internet explorer,version=11,maxInstances=5,seleniumProtocol=WebDriver" 
--Dwebdriver.chrome.driver="C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Drivers\chromedriver.exe" -browser "browserName=chrome,version=latest,maxSession=3,seleniumProtocol=WebDriver" 
--browser "browserName=firefox,version=25,maxInstances=5,seleniumProtocol=WebDriver"
 
 VM
 cd C:\selenium

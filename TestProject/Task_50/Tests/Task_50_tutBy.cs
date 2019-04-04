@@ -3,8 +3,6 @@ using System.Threading;
 using Allure.NUnit.Attributes;
 using Initialize;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 
 namespace Task_50.Tests
 {
@@ -18,12 +16,13 @@ namespace Task_50.Tests
         private readonly string _username = "seleniumtests@tut.by";
         private readonly string _password = "123456789zxcvbn";
 
-        [SetUp]
-        public override void TestSetup()
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
         {
-            base.TestSetup();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            base.OneTimeSetUp();
+            //new AssemblyConfiguration().UpdateAllureConfig();
             _locators = new Locators.TutByLocators();
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         }
 
         [Test]
@@ -35,7 +34,7 @@ namespace Task_50.Tests
         public void LoginTutBy_CorrectCredentialsAndWait_Successfull()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(_startPage, takeAShot: true);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
@@ -53,7 +52,7 @@ namespace Task_50.Tests
             Driver.FindElement(_locators.enterButton).Click();
 
             //Validate user logged in
-            _locators.WaitForElementDisplayed(Driver, _locators.loggedInSpan);
+            _locators.WaitForElementDisplayed(_locators.loggedInSpan);
             Driver.FindElement(_locators.loggedInSpan).Click();
 
             Assert.True(Driver.FindElement(_locators.personalRoomText).Displayed);
@@ -70,7 +69,7 @@ namespace Task_50.Tests
         public bool LoginTutBy_DDT_Successfull(string userName, string password)
         {
             //Open start page
-            LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(_startPage);
             Thread.Sleep(3000); //Sleep is like explisit wait, but it will block run till all time specified.
 
             //Enter credentials
@@ -88,7 +87,7 @@ namespace Task_50.Tests
             Driver.FindElement(_locators.enterButton).Click();
 
             //Validate user logged in
-            _locators.WaitForElementDisplayed(Driver, _locators.loggedInSpan);
+            _locators.WaitForElementDisplayed(_locators.loggedInSpan);
             Driver.FindElement(_locators.loggedInSpan).Click();
 
             return Driver.FindElement(_locators.personalRoomText).Displayed;

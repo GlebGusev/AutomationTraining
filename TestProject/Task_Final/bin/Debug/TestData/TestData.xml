@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testData>
+  <credential user="glebgusev.auto1@gmail.com" password="Password1*" expectedResult="true"></credential>
+  <credential user="glebgusev.auto2@gmail.com" password="Password1*" expectedResult="true"></credential>
+  <credential user="glebgusev.auto3@gmail.com" password="Password1*" expectedResult="true"></credential>
+</testData>

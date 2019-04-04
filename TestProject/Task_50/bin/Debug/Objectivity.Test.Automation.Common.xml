@@ -1,0 +1,2575 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Objectivity.Test.Automation.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Objectivity.Test.Automation.Common.BaseConfiguration">
+            <summary>
+            SeleniumConfiguration that consume app.config file <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Description%20of%20App.config%20file">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BaseConfiguration.Logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.TestBrowser">
+            <summary>
+            Gets the Driver.
+            </summary>
+            <example>How to use it: <code>
+            if (BaseConfiguration.TestBrowser == BrowserType.Firefox)
+                {
+                this.Driver.GetElement(this.fileLink.Format(fileName), "Click on file").Click();
+                };
+            </code></example>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.TestBrowserCapabilities">
+            <summary>
+            Gets the Driver capabilities.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.PathToFirefoxProfile">
+            <summary>
+            Gets the path to firefox profile.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.Protocol">
+            <summary>
+            Gets the application protocol (http or https).
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.Host">
+            <summary>
+            Gets the application host name.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.Url">
+            <summary>
+            Gets the url.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.Proxy">
+            <summary>
+            Gets the browser proxy.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.Username">
+            <summary>
+            Gets the username.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.Password">
+            <summary>
+            Gets the password.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.MediumTimeout">
+            <summary>
+            Gets the java script or ajax waiting time [seconds].
+            </summary>
+            <example>How to use it: <code>
+            this.Driver.IsElementPresent(this.statusCodeHeader, BaseConfiguration.MediumTimeout);
+            </code></example>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.LongTimeout">
+            <summary>
+            Gets the page load waiting time [seconds].
+            </summary>
+            <example>How to use it: <code>
+            element.GetElement(locator, BaseConfiguration.LongTimeout, e => e.Displayed, customMessage);
+            </code></example>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.ShortTimeout">
+            <summary>
+            Gets the assertion waiting time [seconds].
+            </summary>
+            <example>How to use it: <code>
+            this.Driver.IsElementPresent(this.downloadPageHeader, BaseConfiguration.ShortTimeout);
+            </code></example>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.ImplicitlyWaitMilliseconds">
+            <summary>
+            Gets the Implicitly Wait time [milliseconds].
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.FirefoxPath">
+            <summary>
+            Gets the firefox path
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.ChromePath">
+            <summary>
+            Gets the chrome path
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.RemoteWebDriverHub">
+            <summary>
+            Gets the Remote Web Driver hub url
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.FullDesktopScreenShotEnabled">
+            <summary>
+            Gets a value indicating whether enable full desktop screen shot. False by default.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.JavaScriptErrorLogging">
+            <summary>
+            Gets a value indicating whether logs JavaScript errors from a browser. False by default.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.JavaScriptErrorTypes">
+            <summary>
+            Gets JavaScript error types from a browser. "SyntaxError,EvalError,ReferenceError,RangeError,TypeError,URIError,Refused to display,Internal Server Error,Cannot read property" by default.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.FirefoxUseLegacyImplementation">
+            <summary>
+            Gets a value indicating whether enable legacy implementation for Firefox.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.UseDefaultFirefoxProfile">
+            <summary>
+            Gets a value indicating whether use firefox profile. False by default.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.SeleniumScreenShotEnabled">
+            <summary>
+            Gets a value indicating whether enable full desktop screen shot. True by default.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.EnableEventFiringWebDriver">
+            <summary>
+            Gets a value indicating whether enable EventFiringWebDriver.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.UseCurrentDirectory">
+            <summary>
+            Gets a value indicating whether use CurrentDirectory for path where assembly files are located.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.GetPageSourceEnabled">
+            <summary>
+            Gets a value indicating whether [get page source enabled].
+            </summary>
+            <value>
+            <c>true</c> if [get page source enabled]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.DownloadFolder">
+            <summary>
+            Gets the download folder key value
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.ScreenShotFolder">
+            <summary>
+            Gets the screen shot folder key value
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.PageSourceFolder">
+            <summary>
+            Gets the page source folder key value
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.GetUrlValue">
+            <summary>
+            Gets the URL value 'Protocol://HostURL'.
+            </summary>
+            <example>How to use it: <code>
+            var url = BaseConfiguration.GetUrlValue;
+            </code></example>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.GetUrlValueWithUserCredentials">
+            <summary>
+            Gets the URL value with user credentials 'Protocol://Username:Password@HostURL'.
+            </summary>
+            <example>How to use it: <code>
+            var url = BaseConfiguration.GetUrlValueWithUserCredentials;
+            </code></example>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.BaseConfiguration.SynchronizationWithAngularEnabled">
+            <summary>
+            Gets a value indicating whether enable AngularJS synchronization. False by default.
+            </summary>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.BrowserType">
+            <summary>
+            Supported browsers
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.Firefox">
+            <summary>
+            Firefox browser
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.FirefoxPortable">
+            <summary>
+            Firefox portable
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.InternetExplorer">
+            <summary>
+            InternetExplorer browser
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.IE">
+            <summary>
+            InternetExplorer browser
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.Chrome">
+            <summary>
+            Chrome browser
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.Safari">
+            <summary>
+            Safari browser
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.RemoteWebDriver">
+            <summary>
+            Remote Web driver
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.Edge">
+            <summary>
+            Edge driver
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.CloudProvider">
+            <summary>
+            CloudProvider parallel cross browsers testing
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.Android">
+            <summary>
+            Browser type to run test on Android with CloudProviders
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.Iphone">
+            <summary>
+            Browser type to run test on Iphone with CloudProviders
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.BrowserType.None">
+            <summary>
+            Not supported browser
+            </summary>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.DriverContext">
+            <summary>
+            Contains handle to driver and methods for web browser
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.DriverContext.driver">
+            <summary>
+            Gets or sets the handle to current driver.
+            </summary>
+            <value>
+            The handle to driver.
+            </value>
+        </member>
+        <member name="E:Objectivity.Test.Automation.Common.DriverContext.DriverOptionsSet">
+            <summary>
+            Occurs when [driver options set].
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.PerformanceMeasures">
+            <summary>
+            Gets instance of Performance PerformanceMeasures class
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.TestTitle">
+            <summary>
+            Gets or sets the test title.
+            </summary>
+            <value>
+            The test title.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.CrossBrowserProfile">
+            <summary>
+            Gets or sets the CrossBrowserProfile from App.config
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.CrossBrowserEnvironment">
+            <summary>
+            Gets or sets the Environment Browsers from App.config
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.ScreenShotFolder">
+            <summary>
+            Gets Sets Folder name for ScreenShot
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.DownloadFolder">
+            <summary>
+            Gets Sets Folder name for Download
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.PageSourceFolder">
+            <summary>
+            Gets Sets Folder name for PageSource
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.IsTestFailed">
+            <summary>
+            Gets or sets a value indicating whether [test failed].
+            </summary>
+            <value>
+              <c>true</c> if [test failed]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.LogTest">
+            <summary>
+            Gets or sets test logger
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.Driver">
+            <summary>
+            Gets driver Handle
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.VerifyMessages">
+            <summary>
+            Gets all verify messages
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverContext.CurrentDirectory">
+            <summary>
+            Gets or sets directory where assembly files are located
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.TakeScreenshot">
+            <summary>
+            Takes the screenshot.
+            </summary>
+            <returns>An image of the page currently loaded in the browser.</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.Start">
+            <summary>
+            Starts the specified Driver.
+            </summary>
+            <exception cref="T:System.NotSupportedException">When driver not supported</exception>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.WindowMaximize">
+            <summary>
+            Maximizes the current window if it is not already maximized.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.DeleteAllCookies">
+            <summary>
+            Deletes all cookies from the page.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.Stop">
+            <summary>
+            Stop browser instance.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.SaveScreenshot(Objectivity.Test.Automation.Common.Types.ErrorDetail,System.String,System.String)">
+            <summary>
+            Saves the screenshot.
+            </summary>
+            <param name="errorDetail">The error detail.</param>
+            <param name="folder">The folder.</param>
+            <param name="title">The title.</param>
+            <returns>Path to the screenshot</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.SavePageSource(System.String)">
+            <summary>
+            Saves the page source.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <returns>The saved source file</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.TakeAndSaveScreenshot">
+            <summary>
+            Takes and saves screen shot
+            </summary>
+            <returns>Array of filepaths</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.LogJavaScriptErrors">
+            <summary>
+            Logs JavaScript errors
+            </summary>
+            <returns>True if JavaScript errors found</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverContext.SetDriverOptions``1(``0)">
+            <summary>
+            Sets the driver options.
+            </summary>
+            <typeparam name="T">The type of DriverOptions for the specific Browser</typeparam>
+            <param name="options">The options.</param>
+            <returns>
+            The Driver Options
+            </returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.DriverOptionsSetEventArgs">
+            <summary>
+            Before Capabilities Set Handler. <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Advanced-Browser-Capabilities-and-options">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriverOptionsSetEventArgs.#ctor(OpenQA.Selenium.DriverOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.DriverOptionsSetEventArgs" /> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.DriverOptionsSetEventArgs.DriverOptions">
+            <summary>
+            Gets the current capabilities
+            </summary>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.DriversCustomSettings">
+            <summary>
+            To keep drivers custom setting. <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Angular-support">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriversCustomSettings.IsDriverSynchronizationWithAngular(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method return true or false is driver is synchronized with angular.
+            </summary>
+            <param name="driver">Provide driver.</param>
+            <returns>If driver is synchornized with angular return true if not return false.</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.DriversCustomSettings.SetAngularSynchronizationForDriver(OpenQA.Selenium.IWebDriver,System.Boolean)">
+            <summary>
+            Set angular synchronization for driver.
+            </summary>
+            <param name="driver">Provide driver.</param>
+            <param name="enable">Set true to enable.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException">
+            <summary>
+            The exception that is thrown when the time for a process or operation has expired.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException"/> class.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException">
+            <summary>
+            Exception to throw when problem with setting the test case name from parameters
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException"/> class.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Exceptions.DataDrivenReadException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.PrintPerformanceResultsHelper">
+            <summary>
+            Class which support displaying performance test results. <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Performance%20measures">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PrintPerformanceResultsHelper.PrintPercentiles90DurationMillisecondsinTeamcity(Objectivity.Test.Automation.Common.Helpers.PerformanceHelper)">
+            <summary>
+            Prints the performance summary of percentiles 90 duration in millisecond in Teamcity.
+            </summary>
+            <param name="measures">The instance of PerformanceHelper class.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PrintPerformanceResultsHelper.PrintAverageDurationMillisecondsInTeamcity(Objectivity.Test.Automation.Common.Helpers.PerformanceHelper)">
+            <summary>
+            Prints the performance summary of average duration in millisecond in TeamCity.
+            </summary>
+            <param name="measures">The instance of PerformanceHelper class.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PrintPerformanceResultsHelper.PrintPercentiles90DurationMillisecondsInAppVeyor(Objectivity.Test.Automation.Common.Helpers.PerformanceHelper)">
+            <summary>
+            Prints the performance summary of percentiles 90 duration in millisecond in AppVeyor.
+            </summary>
+            <param name="measures">The instance of PerformanceHelper class.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PrintPerformanceResultsHelper.PrintAverageDurationMillisecondsInAppVeyor(Objectivity.Test.Automation.Common.Helpers.PerformanceHelper)">
+            <summary>
+            Prints the performance summary of average duration in millisecond in AppVeyor.
+            </summary>
+            <param name="measures">The instance of PerformanceHelper class.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PrintPerformanceResultsHelper.PrintResultsInAppVeyor(System.Linq.IOrderedEnumerable{System.String})">
+            <summary>
+            Prints test results in AppVeyor
+            </summary>
+            <param name="measuresToPrint">Average load times for particular scenarios and browsers</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.WaitHelper">
+            <summary>
+            Contains wait methods with timeouts
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.WaitHelper.Wait(System.Func{System.Boolean},System.TimeSpan,System.String)">
+            <summary>
+            Wait for a condition with given timeout.
+            </summary>
+            <param name="condition">The condition to be met.</param>
+            <param name="timeout">The timeout value [seconds] indicating how long to wait for the condition.</param>
+            <param name="message">The exception message</param>
+            <exception cref="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException">Timeout exception when condition is not met</exception>
+            <example>How to use it: <code>
+            WaitHelper.Wait(() => CountFiles(folder, type) > filesNumber, TimeSpan.FromSeconds(waitTime), timeoutMessage);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.WaitHelper.Wait(System.Func{System.Boolean},System.TimeSpan,System.TimeSpan,System.String)">
+            <summary>
+            Wait for a condition with given timeout and timeInterval.
+            </summary>
+            <param name="condition">The condition to be met.</param>
+            <param name="timeout">The timeout value [seconds] indicating how long to wait for the condition.</param>
+            <param name="sleepInterval">The value [seconds] indicating how often to check for the condition to be true.</param>
+            <param name="message">The exception message</param>
+            <exception cref="T:Objectivity.Test.Automation.Common.Exceptions.WaitTimeoutException">Timeout exception when condition is not met</exception>
+            <example>How to use it: <code>
+            WaitHelper.Wait(() => CountFiles(folder, type) > filesNumber, TimeSpan.FromSeconds(waitTime), TimeSpan.FromSeconds(1), timeoutMessage);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.WaitHelper.Wait(System.Func{System.Boolean},System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Wait for a condition with given timeout and timeInterval.
+            </summary>
+            <param name="condition">The condition to be met.</param>
+            <param name="timeout">The timeout value [seconds] indicating how long to wait for the condition.</param>
+            <param name="sleepInterval">The value [seconds] indicating how often to check for the condition to be true.</param>
+            <returns>
+            True if condition is met in given timeout
+            </returns>
+            <example>How to use it: <code>
+            bool result = WaitHelper.Wait(() => CountFiles(folder, type) > filesNumber, TimeSpan.FromSeconds(waitTime), TimeSpan.FromSeconds(1));
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.MdxHelper">
+            <summary>
+            Class is used for execution MDX queries and reading data from Analysis Services.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.MdxHelper.Logger">
+            <summary>
+            NLog logger handle
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.MdxHelper.ExecuteMdxCommand(System.String,System.String,System.Int32)">
+            <summary>
+            Method is used for execution MDX query and reading each row from column.
+            </summary>
+            <param name="command">MDX query string.</param>
+            <param name="connectionString">The Analysis Services connection string.</param>
+            <param name="index">The index of column.</param>
+            <returns>Collection of MDX query results</returns>
+            <example>How to use it: <code>
+            var connectionString = "Provider=MSOLAP.5;Password=password;Persist Security Info=True;User ID=username;Initial Catalog=AdventureWorks;Data Source=servername;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error";
+            const string SqlQuery = "Select [Measures].[Internet Average Sales Amount] on Columns, [Product].[Category].members on Rows From [AdventureWorks];";
+            ICollection&lt;string&gt; result = MdxHelper.ExecuteMdxCommand(mdxQuery, connectionString, 1);
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.FileType">
+            <summary>
+            Files type
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.None">
+            <summary>
+            File type not implemented
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Pdf">
+            <summary>
+            Portable document format files
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Xls">
+            <summary>
+             Microsoft Excel worksheet sheet (97–2003)
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Doc">
+            <summary>
+            Microsoft Word document
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Csv">
+            <summary>
+            Comma-separated values files
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Txt">
+            <summary>
+            Text files
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Xlsx">
+            <summary>
+            Office open XML worksheet sheet
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Docx">
+            <summary>
+            Office Open XML document
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Gif">
+            <summary>
+            Graphics Interchange Format
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Jpg">
+            <summary>
+            Joint Photographic Experts Group
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Bmp">
+            <summary>
+            Microsoft Windows Bitmap formatted image
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Png">
+            <summary>
+            Portable Network Graphic
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Xml">
+            <summary>
+            Open data file format
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Html">
+            <summary>
+            Hyper text markup language
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Ppt">
+            <summary>
+            Microsoft PowerPoint Presentation
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FileType.Pptx">
+            <summary>
+            Office Open XML Presentation
+            </summary>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.FilesHelper">
+            <summary>
+            Class for handling downloading files <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Downloading%20files">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.FilesHelper.Separator">
+            <summary>
+            Directory separator
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.ReturnFileExtension(Objectivity.Test.Automation.Common.Helpers.FileType)">
+            <summary>
+            Returns the file extension.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>
+            Files extension
+            </returns>
+            <example>How to use it: <code>
+            FilesHelper.ReturnFileExtension(FileType.Html);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetFilesOfGivenType(System.String,Objectivity.Test.Automation.Common.Helpers.FileType)">
+            <summary>
+            Gets the files of given type.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="type">The type.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetFilesOfGivenType(folder, FileType.Txt);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetFilesOfGivenType(System.String,Objectivity.Test.Automation.Common.Helpers.FileType,System.String)">
+            <summary>
+            Gets the files of given type, use postfixFilesName in search pattern.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="type">The type of files.</param>
+            <param name="postfixFilesName">Postfix name of files for search pattern.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetFilesOfGivenType(folder, FileType.Txt, "live");
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetFilesOfGivenTypeFromAllSubFolders(System.String,Objectivity.Test.Automation.Common.Helpers.FileType)">
+            <summary>
+            Gets the files of given type from all sub folders.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="type">The type of files.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetFilesOfGivenTypeFromAllSubFolders(folder, FileType.Txt);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetFilesOfGivenTypeFromAllSubFolders(System.String,Objectivity.Test.Automation.Common.Helpers.FileType,System.String)">
+            <summary>
+            Gets the files of given type from all sub folders, use postfixFilesName in search pattern.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="type">The type of files.</param>
+            <param name="postfixFilesName">Postfix name of files for search pattern.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetFilesOfGivenTypeFromAllSubFolders(folder, FileType.Txt, "live");
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetAllFiles(System.String,System.String)">
+            <summary>
+            Gets all files from folder, use postfixFilesName in search pattern.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="postfixFilesName">Postfix name of files for search pattern.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetAllFiles(folder, "live");
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetAllFilesFromAllSubFolders(System.String,System.String)">
+            <summary>
+            Gets all files from all sub folders, use postfixFilesName in search pattern.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="postfixFilesName">Postfix name of files for search pattern.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetAllFilesFromAllSubFolders(folder, "live");
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetAllFilesFromAllSubFolders(System.String)">
+            <summary>
+            Gets all files from all sub folders.
+            </summary>
+            <param name="folder">The folder.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetAllFilesFromAllSubFolders(folder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetAllFiles(System.String)">
+            <summary>
+            Gets all files from folder.
+            </summary>
+            <param name="folder">The folder.</param>
+            <returns>
+            Collection of files
+            </returns>
+            <example>How to use it: <code>
+            var files = GetAllFiles(folder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetFileByName(System.String,System.String)">
+            <summary>
+            Get file by its name in given folder
+            </summary>
+            <param name="folder">The folder</param>
+            <param name="fileName">The file name</param>
+            <returns>FileInfo of file</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.CountFiles(System.String,Objectivity.Test.Automation.Common.Helpers.FileType)">
+            <summary>
+            Counts the files of given type.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="type">The type.</param>
+            <returns>
+            Number of files in subfolder
+            </returns>
+            <example>How to use it: <code>
+            var filesNumber = FilesHelper.CountFiles(this.DriverContext.DownloadFolder, FileType.Txt);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.CountFiles(System.String)">
+            <summary>
+            Counts the files.
+            </summary>
+            <param name="folder">The folder.</param>
+            <returns>
+            Number of files in subfolder
+            </returns>
+            <example>How to use it: <code>
+            var filesNumber = FilesHelper.CountFiles(this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetLastFile(System.String,Objectivity.Test.Automation.Common.Helpers.FileType)">
+            <summary>
+            Gets the last file of given type.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="type">The type of file.</param>
+            <returns>Last file of given type</returns>
+            <example>How to use it: <code>
+            FilesHelper.GetLastFile(this.DriverContext.ScreenShotFolder, FileType.Png);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetLastFile(System.String)">
+            <summary>
+            Gets the last file.
+            </summary>
+            <param name="folder">The folder.</param>
+            <returns>
+            Last file of given type
+            </returns>
+            <example>How to use it: <code>
+            FilesHelper.GetLastFile(this.DriverContext.ScreenShotFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFileOfGivenType(Objectivity.Test.Automation.Common.Helpers.FileType,System.Double,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Waits for file of given type for given timeout till number of files increase in sub folder,checks  the size of the current file.
+            </summary>
+            <param name="type">The type of file.</param>
+            <param name="waitTime">Wait timeout</param>
+            <param name="filesNumber">The initial files number.</param>
+            <param name="folder">The folder.</param>
+            <param name="checkSize">Check if  the size, in bytes, of the current file > 0.</param>
+            <example>How to use it: <code>
+            var filesNumber = FilesHelper.CountFiles(this.DriverContext.DownloadFolder, FileType.Txt);
+            this.Driver.GetElement(this.fileLink.Format("some-file.txt")).Click();
+            FilesHelper.WaitForFileOfGivenType(FileType.Txt, BaseConfiguration.LongTimeout, filesNumber, this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFileOfGivenType(Objectivity.Test.Automation.Common.Helpers.FileType,System.Int32,System.String)">
+            <summary>
+            Waits for file of given type for LongTimeout till number of files increase in sub folder, checks  the size of the current file.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="filesNumber">The files number.</param>
+            <param name="folder">The folder.</param>
+            <example>How to use it: <code>
+            var filesNumber = FilesHelper.CountFiles(this.DriverContext.DownloadFolder, FileType.Txt);
+            this.Driver.GetElement(this.fileLink.Format("some-file.txt")).Click();
+            FilesHelper.WaitForFileOfGivenType(FileType.Txt, filesNumber, this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFileOfGivenName(System.Double,System.String,System.String,System.Boolean)">
+            <summary>
+            Waits for file with given name with given timeout, checks  the size of the current file.
+            </summary>
+            <param name="waitTime">Wait timeout</param>
+            <param name="filesName">Name of the files.</param>
+            <param name="folder">The folder.</param>
+            <param name="checkSize">If true, check the size, in bytes, of the current file > 0.</param>
+            <example>How to use it: <code>
+            var file = "some-file.txt"
+            this.Driver.GetElement(this.fileLink.Format(file), "Click on file").Click();
+            FilesHelper.WaitForFileOfGivenName(BaseConfiguration.LongTimeout, file, this.DriverContext.DownloadFolder, true);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFileOfGivenName(System.Double,System.String,System.String)">
+            <summary>
+            Waits for file with given name with given timeout, checks  the size of the current file.
+            </summary>
+            <param name="waitTime">Wait timeout</param>
+            <param name="filesName">Name of the files.</param>
+            <param name="folder">The folder.</param>
+            <example>How to use it: <code>
+            var file = "some-file.txt"
+            this.Driver.GetElement(this.fileLink.Format(file), "Click on file").Click();
+            FilesHelper.WaitForFileOfGivenName(BaseConfiguration.LongTimeout, file, this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFileOfGivenName(System.String,System.String)">
+            <summary>
+            Waits for file of given name with LongTimeout, checks  the size of the current file.
+            </summary>
+            <param name="filesName">Name of the files.</param>
+            <param name="folder">The folder.</param>
+            <example>How to use it: <code>
+            var file = "some-file.txt"
+            this.Driver.GetElement(this.fileLink.Format(file), "Click on file").Click();
+            FilesHelper.WaitForFileOfGivenName(file, this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFileOfGivenName(System.String,System.String,System.Boolean)">
+            <summary>
+            Waits for file of given name with LongTimeout, checks  the size of the current file.
+            </summary>
+            <param name="filesName">Name of the files.</param>
+            <param name="folder">The folder.</param>
+            <param name="checkSize">Check if  the size, in bytes, of the current file > 0.</param>
+            <example>How to use it: <code>
+            var file = "some-file.txt"
+            this.Driver.GetElement(this.fileLink.Format(file), "Click on file").Click();
+            FilesHelper.WaitForFileOfGivenName(file, this.DriverContext.DownloadFolder, true);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFile(System.Double,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Waits for file for given timeout till number of files increase in sub folder, checks  the size of the current file.
+            </summary>
+            <param name="waitTime">Wait timeout</param>
+            <param name="filesNumber">The initial files number.</param>
+            <param name="folder">The folder.</param>
+            <param name="checkSize">Check if  the size, in bytes, of the current file > 0.</param>
+            <example>How to use it:<code>
+            var filesNumber = FilesHelper.CountFiles(this.DriverContext.DownloadFolder);
+            this.Driver.GetElement(this.fileLink.Format("some-file.txt")).Click();
+            FilesHelper.WaitForFile(BaseConfiguration.LongTimeout, filesNumber, this.DriverContext.DownloadFolder, true);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.WaitForFile(System.Int32,System.String)">
+            <summary>
+            Waits for file with LongTimeout till number of files increase in sub folder, checks  the size of the current file.
+            </summary>
+            <param name="filesNumber">The initial files number.</param>
+            <param name="folder">The folder.</param>
+            <example>How to use it: <code>
+            var filesNumber = FilesHelper.CountFiles(this.DriverContext.DownloadFolder);
+            this.Driver.GetElement(this.fileLink.Format("some-file.txt")).Click();
+            FilesHelper.WaitForFile(filesNumber, this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.RenameFile(System.Double,System.String,System.String,System.String)">
+            <summary>
+            Rename the file and check if file was renamed with given timeout, shorten the name of file if needed be removing "_".
+            </summary>
+            <param name="waitTime">Timeout for checking if file was removed</param>
+            <param name="oldName">The old name.</param>
+            <param name="newName">The new name.</param>
+            <param name="subFolder">The subFolder.</param>
+            <returns>The new name in case its shorten</returns>
+            <example>How to use it: <code>
+            string newName = FilesHelper.RenameFile(BaseConfiguration.ShortTimeout, "filename.txt", "newname.txt", this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.CopyFile(System.Double,System.String,System.String,System.String)">
+            <summary>
+            Copy the file and check if file was copied with given timeout, shorten the name of file if needed be removing "_".
+            </summary>
+            <param name="waitTime">Timeout for checking if file was removed</param>
+            <param name="oldName">The old name.</param>
+            <param name="newName">The new name.</param>
+            <param name="workingDirectory">The working folder.</param>
+            <returns>The new name in case its shorten</returns>
+            <example>How to use it: <code>
+            FilesHelper.CopyFile(BaseConfiguration.ShortTimeout, fileName, newName, this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.CopyFile(System.Double,System.String,System.String,System.String,System.String)">
+            <summary>
+            Copy the file and check if file was copied with given timeout, shorten the name of file if needed be removing "_".
+            </summary>
+            <param name="waitTime">Timeout for checking if file was removed</param>
+            <param name="oldName">The old name.</param>
+            <param name="newName">The new name.</param>
+            <param name="oldSubFolder">The old subFolder.</param>
+            <param name="newSubFolder">The new subFolder.</param>
+            <returns>The new name in case its shorten</returns>
+            <example>How to use it: <code>
+            FilesHelper.CopyFile(BaseConfiguration.ShortTimeout, fileName, newName, this.DriverContext.DownloadFolder + "\\", this.DriverContext.DownloadFolder + "\\");
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.DeleteFile(System.String,System.String)">
+            <summary>
+            Delete file in given folder if exists.
+            </summary>
+            <param name="name">The name of file.</param>
+            <param name="subFolder">The subFolder.</param>
+            <example>How to use it: <code>
+            FilesHelper.DeleteFile("filename.txt", this.DriverContext.DownloadFolder);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.RenameFile(System.String,System.String,System.String,Objectivity.Test.Automation.Common.Helpers.FileType)">
+            <summary>
+            Rename the file of given type and check if file was renamed with ShortTimeout, shorten the name of file if needed be removing "_".
+            </summary>
+            <param name="oldName">The old name.</param>
+            <param name="newName">The new name.</param>
+            <param name="subFolder">The subFolder.</param>
+            <param name="type">The type of file.</param>
+            <returns>The new name in case its shorten</returns>
+            <example>How to use it: <code>
+            string newName = FilesHelper.RenameFile("filename.txt", "newname", this.DriverContext.DownloadFolder, FileType.Csv);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.FilesHelper.GetFolder(System.String,System.String)">
+            <summary>
+            Gets the folder from app.config as value of given key.
+            </summary>
+            <param name="appConfigValue">The application configuration value.</param>
+            <param name="currentFolder">Directory where assembly files are located</param>
+            <returns>
+            The path to folder
+            </returns>
+            <example>How to use it: <code>
+              FilesHelper.GetFolder(BaseConfiguration.DownloadFolder, this.CurrentDirectory);
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.TakeScreenShot">
+            <summary>
+            Custom screenshot solution
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.TakeScreenShot.DoIt">
+            <summary>
+            Takes screen shot.
+            </summary>
+            <returns>Image contains desktop screenshot</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.TakeScreenShot.Save(System.Drawing.Bitmap,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            Saves the specified bitmap.
+            </summary>
+            <param name="bitmap">The bitmap.</param>
+            <param name="format">The format.</param>
+            <param name="folder">The folder.</param>
+            <param name="title">The title.</param>
+            <returns>The path to the saved bitmap, null if not saved.</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.TakeScreenShot.TakeScreenShotOfElement(OpenQA.Selenium.IWebElement,System.String,System.String)">
+            <summary>
+            Takes screen shot of specific element.
+            </summary>
+            <param name="element">Element to take screenshot</param>
+            <param name="folder">Folder to save screenshot</param>
+            <param name="screenshotName">Name of screenshot</param>
+            <returns>Full path to taken screenshot</returns>
+            <example>How to use it: <code>
+            var el = this.Driver.GetElement(this.menu);
+            var fullPath = TakeScreenShot.TakeScreenShotOfElement(el, TestContext.CurrentContext.TestDirectory + BaseConfiguration.ScreenShotFolder, "MenuOutSideTheIFrame");
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.TakeScreenShot.TakeScreenShotOfElement(System.Int32,System.Int32,OpenQA.Selenium.IWebElement,System.String,System.String)">
+            <summary>
+            Takes screen shot of specific element within iframe.
+            </summary>
+            <param name="iframeLocationX">X coordinate of iframe</param>
+            <param name="iframeLocationY">Y coordinate of iframe</param>
+            <param name="element">Element to take screenshot</param>
+            <param name="folder">Folder to save screenshot</param>
+            <param name="screenshotName">Name of screenshot</param>
+            <returns>Full path to taken screenshot</returns>
+            <example>How to use it: <code>
+            var iFrame = this.Driver.GetElement(this.iframe);
+            int x = iFrame.Location.X;
+            int y = iFrame.Location.Y;
+            this.Driver.SwitchTo().Frame(0);
+            var el = this.Driver.GetElement(this.elelemtInIFrame);
+            var fullPath = TakeScreenShot.TakeScreenShotOfElement(x, y, el, TestContext.CurrentContext.TestDirectory + BaseConfiguration.ScreenShotFolder, "MenuOutSideTheIFrame");
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.DateHelper">
+            <summary>
+            Contains useful actions connected with dates
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Helpers.DateHelper.TomorrowDate">
+            <summary>
+            Gets the tomorrow date.
+            </summary>
+            <value>
+            The tomorrow date.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Helpers.DateHelper.CurrentTimeStamp">
+            <summary>
+            Gets the current time stamp.
+            </summary>
+            <value>
+            The current time stamp.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Helpers.DateHelper.CurrentDate">
+            <summary>
+            Gets the current date.
+            </summary>
+            <value>
+            The current date.
+            </value>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.DateHelper.GetFutureDate(System.Int32)">
+            <summary>
+            Gets the future date.
+            </summary>
+            <param name="numberDaysToAddToNow">The number days to add from current date.</param>
+            <returns>Date in future depends on parameter: numberDaysToAddToNow</returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.NameHelper">
+            <summary>
+            Contains useful actions connected with test data
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.NameHelper.Logger">
+            <summary>
+            NLog logger handle
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.NameHelper.RandomName(System.Int32)">
+            <summary>
+            Create random name.
+            </summary>
+            <param name="length">The length.</param>
+            <returns>Random name</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.NameHelper.ShortenFileName(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shortens the file name by removing occurrences of given pattern till length of folder + filename will be shorten than max Length.
+            </summary>
+            <param name="folder">The folder.</param>
+            <param name="fileName">The fileName.</param>
+            <param name="pattern">The regular expression pattern to match</param>
+            <param name="maxLength">Max length</param>
+            <returns>String with removed all patterns</returns>
+            <example>How to use it: <code>
+            NameHelper.ShortenFileName(folder, correctFileName, "_", 255);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.NameHelper.RemoveSpecialCharacters(System.String)">
+            <summary>
+            Remove all special characters except digit and letters.
+            </summary>
+            <param name="name">The string to remove special chracters.</param>
+            <returns>String with removed all special chracters</returns>
+            <example>How to use it: <code>
+            var name = NameHelper.RemoveSpecialCharacters("country/region");
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper">
+            <summary>
+            Class which support performance tests. <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Performance%20measures">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.timer">
+            <summary>
+            The timer
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.loadTimeList">
+            <summary>
+            The scenario list
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper"/> class.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.GetloadTimeList">
+            <summary>
+            Gets the scenario list
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.AllGroupedDurationsMilliseconds">
+            <summary>
+            Gets all the durations milliseconds.
+            </summary>
+            <returns>Return average load times for particular scenarios and browsers.</returns>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.MeasuredTime">
+            <summary>
+            Gets or sets measured time.
+            </summary>
+            <value>Return last measured time.</value>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.StartMeasure">
+            <summary>
+            Starts the measure.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.PerformanceHelper.StopMeasure(System.String)">
+            <summary>
+            Stops the measure.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Helpers.SqlHelper">
+            <summary>
+            Class is used for execution SQL queries and reading data from database.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Helpers.SqlHelper.Logger">
+            <summary>
+            NLog logger handle
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.SqlHelper.ExecuteSqlCommand(System.String,System.String,System.String)">
+            <summary>
+            Method is used for execution SQL query (select) and reading each row from column.
+            </summary>
+            <param name="command">SQL query</param>
+            <param name="connectionString">Server, user, pass</param>
+            <param name="column">Name of column</param>
+            <returns>
+            Collection of each row existed in column.
+            </returns>
+            <example>How to use it: <code>
+            var connectionString = "User ID=sqluser;Password=sqluserpassword;server=servername;";
+            const string ColumnName = "AccountNumber";
+            const string SqlQuery = "SELECT  AccountNumber as " + ColumnName + " FROM [AdventureWorks].[Sales].[Customer] where [CustomerID] in (1, 2)";
+            var result = SqlHelper.ExecuteSqlCommand(SqlQuery, connectionString, ColumnName);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Helpers.SqlHelper.ExecuteSqlCommand(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Method is used for execution SQL query (select) and reading each column from row.
+            </summary>
+            <param name="command">SQL query</param>
+            <param name="connectionString">Server, user, pass</param>
+            <param name="columns">Name of columns</param>
+            <returns>
+            Dictionary of each column existed in raw.
+            </returns>
+            <example>How to use it: <code>
+            var connectionString = "User ID=sqluser;Password=sqluserpassword;server=servername;";
+            ICollection&lt;string&gt; column = new List&lt;string&gt;();
+            column.Add("NationalIDNumber");
+            column.Add("ContactID");
+            const string SqlQuery = "SELECT [NationalIDNumber] as " + column.ElementAt(0) + " , [ContactID] as " + column.ElementAt(1) + " from [AdventureWorks].[HumanResources].[Employee] where EmployeeID=1";
+            Dictionary&lt;string, string&gt; results = SqlHelper.ExecuteSqlCommand(command, GetConnectionString(server), column);
+            </code></example>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">Exception when there is not given column in results from SQL query</exception>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver">
+            <summary>
+            Override selenium methods to add event logs
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.#ctor(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver"/> class.
+            </summary>
+            <param name="parentDriver">The parent driver.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnNavigating(OpenQA.Selenium.Support.Events.WebDriverNavigationEventArgs)">
+            <summary>
+            Raises the <see cref="E:Navigating" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebDriverNavigationEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnElementClicking(OpenQA.Selenium.Support.Events.WebElementEventArgs)">
+            <summary>
+            Raises the <see cref="E:ElementClicking" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebElementEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnElementValueChanging(OpenQA.Selenium.Support.Events.WebElementValueEventArgs)">
+            <summary>
+            Raises the <see cref="E:ElementValueChanging" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebElementEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnElementValueChanged(OpenQA.Selenium.Support.Events.WebElementValueEventArgs)">
+            <summary>
+            Raises the <see cref="E:ElementValueChanged" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebElementEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnFindingElement(OpenQA.Selenium.Support.Events.FindElementEventArgs)">
+            <summary>
+            Raises the <see cref="E:FindingElement" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.FindElementEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnScriptExecuting(OpenQA.Selenium.Support.Events.WebDriverScriptEventArgs)">
+            <summary>
+            Raises the <see cref="E:ScriptExecuting" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebDriverScriptEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.OnScriptExecuted(OpenQA.Selenium.Support.Events.WebDriverScriptEventArgs)">
+            <summary>
+            Raises the <see cref="E:ScriptExecuted" /> event.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebDriverScriptEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.ToStringElement(OpenQA.Selenium.Support.Events.WebElementEventArgs)">
+            <summary>
+            To the string element.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebElementEventArgs"/> instance containing the event data.</param>
+            <returns>Formated issue</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.MyEventFiringWebDriver.AppendAttribute(OpenQA.Selenium.Support.Events.WebElementEventArgs,System.String)">
+            <summary>
+            Appends the attribute.
+            </summary>
+            <param name="e">The <see cref="T:OpenQA.Selenium.Support.Events.WebElementEventArgs"/> instance containing the event data.</param>
+            <param name="attribute">The attribute.</param>
+            <returns>Atribute and value</returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Logger.TestLogger">
+            <summary>
+            Class for test logger
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Logger.TestLogger.log">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Logger.TestLogger.startTestTime">
+            <summary>
+            The start test time
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.TestLogger.LogTestStarting(Objectivity.Test.Automation.Common.DriverContext)">
+            <summary>
+            Logs the test starting.
+            </summary>
+            <param name="driverContext">The driver context.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.TestLogger.LogTestEnding(Objectivity.Test.Automation.Common.DriverContext)">
+            <summary>
+            Logs the test ending.
+            </summary>
+            <param name="driverContext">The driver context.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.TestLogger.Info(System.String,System.Object[])">
+            <summary>
+            Information the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.TestLogger.Warn(System.String,System.Object[])">
+            <summary>
+            Warns the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.TestLogger.Error(System.String,System.Object[])">
+            <summary>
+            Errors the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Logger.TestLogger.LogError(System.Exception)">
+            <summary>
+            Logs the error.
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.TestBase">
+            <summary>
+            Class contains method for all tests, should be used in project test base
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.TestBase.SaveTestDetailsIfTestFailed(Objectivity.Test.Automation.Common.DriverContext)">
+            <summary>
+            Take screenshot if test failed and delete cached page objects.
+            </summary>
+            <param name="driverContext">The driver context.</param>
+            <returns>The saved attachements, null if not found.</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.TestBase.SavePageSource(Objectivity.Test.Automation.Common.DriverContext)">
+            <summary>
+            Save Page Source
+            </summary>
+            <param name="driverContext">
+            Driver context includes
+            </param>
+            <returns>Path to the page source</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.TestBase.IsVerifyFailedAndClearMessages(Objectivity.Test.Automation.Common.DriverContext)">
+            <summary>
+            Fail Test If Verify Failed and clear verify messages
+            </summary>
+            <param name="driverContext">Driver context includes</param>
+            <returns>True if test failed</returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Verify">
+            <summary>
+            Class for assert without stop tests <see href="https://github.com/ObjectivityLtd/Test.Automation/wiki/Verify-asserts-without-stop-tests">More details on wiki</see>
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Verify.That(Objectivity.Test.Automation.Common.DriverContext,System.Action[])">
+            <summary>
+            Verify group of assets
+            </summary>
+            <param name="driverContext">Container for driver</param>
+            <param name="myAsserts">Group asserts</param>
+            <example>How to use it: <code>
+            Verify.That(
+                this.DriverContext,
+                () => Assert.AreEqual(5 + 7 + 2, forgotPassword.EnterEmail(5, 7, 2)),
+                () => Assert.AreEqual("Your e-mail's been sent!", forgotPassword.ClickRetrievePassword));
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Verify.That(Objectivity.Test.Automation.Common.DriverContext,System.Boolean,System.Boolean,System.Action[])">
+            <summary>
+            Verify group of assets
+            </summary>
+            <param name="driverContext">Container for driver</param>
+            <param name="enableScreenShot">Enable screenshot</param>
+            <param name="enableSavePageSource">Enable save page source</param>
+            <param name="myAsserts">Group asserts</param>
+            <example>How to use it: <code>
+            Verify.That(
+                this.DriverContext,
+                true,
+                false,
+                () => Assert.AreEqual(5 + 7 + 2, forgotPassword.EnterEmail(5, 7, 2)),
+                () => Assert.AreEqual("Your e-mail's been sent!", forgotPassword.ClickRetrievePassword));
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Verify.That(Objectivity.Test.Automation.Common.DriverContext,System.Action,System.Boolean,System.Boolean)">
+            <summary>
+            Verify assert conditions
+            </summary>
+            <param name="driverContext">Container for driver</param>
+            <param name="myAssert">Assert condition</param>
+            <param name="enableScreenShot">Enabling screenshot</param>
+            <param name="enableSavePageSource">Enable save page source</param>
+            <example>How to use it: <code>
+            Verify.That(this.DriverContext, () => Assert.IsFalse(flag), true);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Verify.That(Objectivity.Test.Automation.Common.DriverContext,System.Action)">
+            <summary>
+            Verify assert conditions
+            </summary>
+            <param name="driverContext">Container for driver</param>
+            <param name="myAssert">Assert condition</param>
+            <example>How to use it: <code>
+            Verify.That(this.DriverContext, () => Assert.AreEqual(parameters["number"], links.CountLinks()));
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Checkbox">
+            <summary>
+            Contains methods for checkbox.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.WebElements.Checkbox.webElement">
+            <summary>
+            The web element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Checkbox.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Checkbox"/> class.
+            </summary>
+            <param name="webElement">The webElement.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Checkbox.TickCheckbox">
+            <summary>
+            Set check box.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Checkbox.UntickCheckbox">
+            <summary>
+            Clear the check box.
+            </summary>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert">
+            <summary>
+            Implementation for JavaScript Alert interface.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert.webDriver">
+            <summary>
+            The web driver
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert.#ctor(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert"/> class.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert.JavaScriptText">
+            <summary>
+            Gets java script popup text
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert.ConfirmJavaScriptAlert">
+            <summary>
+            Confirms the java script alert popup.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert.DismissJavaScriptAlert">
+            <summary>
+            Dismisses the java script alert popup.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.JavaScriptAlert.SendTextToJavaScript(System.String)">
+            <summary>
+            Method sends text to Java Script Alert
+            </summary>
+            <param name="text">Text to be sent</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoComboBox">
+            <summary>
+                Kendo Combo Box element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoComboBox.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoComboBox" /> class.
+            </summary>
+            <param name="webElement">The webElement</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoComboBox.Input">
+            <summary>
+                Gets web element of the visible input element, where the user types.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoComboBox.SelectType">
+            <summary>Gets the selector.</summary>
+            <value>The selector.</value>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoComboBox.SendKeys(System.String)">
+            <summary>
+                Types text into KendoComboBox input
+            </summary>
+            <param name="text">Text to type</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoDropDownList">
+            <summary>
+            Kendo Drop Down List element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoDropDownList.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoDropDownList"/> class.
+            </summary>
+            <param name="webElement">The webElement</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoDropDownList.SelectType">
+            <summary>Gets the selector.</summary>
+            <value>The selector.</value>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid">
+            <summary>
+            Kendo Grid element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid"/> class.
+            </summary>
+            <param name="webElement">The webElement</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.Driver">
+            <summary>
+            Gets the driver.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.Page">
+            <summary>
+            Gets the page.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.TotalPages">
+            <summary>
+            Gets the total pages.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.SetPage(System.Int32)">
+            <summary>
+            The set page.
+            </summary>
+            <param name="page">
+            The page.
+            </param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.SearchRowWithText(System.String)">
+            <summary>
+            The search row with text.
+            </summary>
+            <param name="text">
+            The text.
+            </param>
+            <returns>
+            The <see cref="T:OpenQA.Selenium.IWebElement"/>.
+            </returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.SearchRowWithText(System.String,System.Double)">
+            <summary>
+            The search row with text.
+            </summary>
+            <param name="text">
+            The text.
+            </param>
+            <param name="timeoutInSeconds">
+            The timeout in seconds.
+            </param>
+            <returns>
+            The <see cref="T:OpenQA.Selenium.IWebElement"/>.
+            </returns>
+            <exception cref="T:OpenQA.Selenium.NotFoundException">
+            When row with text was not found in specific time
+            </exception>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoGrid.GetRowWithText(System.String)">
+            <summary>
+            The get row with text.
+            </summary>
+            <param name="text">
+            The text.
+            </param>
+            <returns>
+            The <see cref="T:OpenQA.Selenium.IWebElement"/>.
+            </returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect">
+            <summary>
+                Kendo Select element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect" /> class.
+            </summary>
+            <param name="webElement">The webElement</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.Driver">
+            <summary>
+                Gets the driver.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.UnorderedList">
+            <summary>Gets the unordered list.</summary>
+            <value>The unordered list.</value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.Options">
+            <summary>
+                Gets the options.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.SelectedOption">
+            <summary>Gets the selected option.</summary>
+            <value>The selected option.</value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.ElementCssSelector">
+            <summary>
+            Gets or sets the element selector.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.SelectType">
+            <summary>Gets the selector.</summary>
+            <value>The selector.</value>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.SelectByText(System.String)">
+            <summary>Select by text.</summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.Close">
+            <summary>Closes this object.</summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoSelect.Open">
+            <summary>Opens this object.</summary>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView">
+            <summary>
+                Kendo Tree View element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView" /> class.
+            </summary>
+            <param name="webElement">The webElement</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.Driver">
+            <summary>
+                Gets the driver.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.SelectedOption">
+            <summary>
+                Gets selected webElement or null
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.Expand">
+            <summary>
+            Expands collapsed nodes.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.Collapse">
+            <summary>
+            Collapses nodes.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.SelectByText(System.String)">
+            <summary>
+                The select by text.
+            </summary>
+            <param name="text">
+                The text.
+            </param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Kendo.KendoTreeView.FindByText(System.String)">
+            <summary>Searches for the first text.</summary>
+            <param name="text">The text.</param>
+            <returns>The found text.</returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Select">
+            <summary>
+            Select contains implementation for method that can be used on dropdown.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.WebElements.Select.webElement">
+            <summary>
+            The web element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Select"/> class.
+            </summary>
+            <param name="webElement">The _webElement.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectElement">
+            <summary>
+            Selenium SelectElement class.
+            </summary>
+            <example>Simple use of SelectElement: <code>
+            this.Driver.GetElement&lt;Select&gt;(WebElement).SelectElement().SelectedOption;
+            </code></example>
+            <returns>Return new SelectElement handle</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectByText(System.String)">
+            <summary>
+            Select value in dropdown using text.
+            </summary>
+            <param name="selectValue">Text to be selected.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectByText(System.String,System.Double)">
+            <summary>
+            Select value in dropdown using text.
+            </summary>
+            <param name="selectValue">Text to be selected.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectByIndex(System.Int32)">
+            <summary>
+            Select value in dropdown using index.
+            </summary>
+            <param name="index">Index value to be selected.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectByIndex(System.Int32,System.Double)">
+            <summary>
+            Select value in dropdown using index.
+            </summary>
+            <param name="index">Index value to be selected.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectByValue(System.String)">
+            <summary>
+            Select value in dropdown using value attribute.
+            </summary>
+            <param name="selectValue">Value to be selected.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.SelectByValue(System.String,System.Double)">
+            <summary>
+            Select value in dropdown using value attribute.
+            </summary>
+            <param name="selectValue">Value to be selected.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.IsSelectOptionAvailable(System.String)">
+            <summary>
+            Determines whether text is available in dropdown.
+            </summary>
+            <param name="option">The text.</param>
+            <returns>
+            True or False depends if text is available in dropdown
+            </returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.IsSelectOptionAvailable(System.String,System.Double)">
+            <summary>
+            Determines whether text is available in dropdown.
+            </summary>
+            <param name="option">The text.</param>
+            <param name="timeout">The timeout.</param>
+            <returns>
+            True or False depends if text is available in dropdown
+            </returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Select.WaitUntilDropdownIsPopulated(System.Double)">
+            <summary>
+            Waits the until dropdown is populated.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <returns>Web element when dropdown populated</returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.WebElements.Table">
+            <summary>
+            The table class contains actions on tables.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.WebElements.Table.webElement">
+            <summary>
+            The web element
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Table.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.WebElements.Table"/> class.
+            </summary>
+            <param name="webElement">The _webElement.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.WebElements.Table.GetTable(Objectivity.Test.Automation.Common.Types.ElementLocator,Objectivity.Test.Automation.Common.Types.ElementLocator)">
+            <summary>
+            Returns a text representation of the grid or table html like element
+            </summary>
+            <param name="rowLocator">The row locator.</param>
+            <param name="columnLocator">The column locator</param>
+            <returns>
+            Text representation of the grid or table html like element
+            </returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Extensions.LocatorExtensions">
+            <summary>
+            Locator extensions methods for selenium
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.LocatorExtensions.ToBy(Objectivity.Test.Automation.Common.Types.ElementLocator)">
+            <summary>
+            From the locator to selenium by converter.
+            </summary>
+            <example>Using standard method FindElement, even we have locator as ElementLocator: <code>
+            private readonly ElementLocator searchTextbox = new ElementLocator(Locator.Id, "SearchTextBoxId");
+            this.Driver.FindElement(searchTextbox.ToBy());
+            </code> </example>
+            <param name="locator">The element locator.</param>
+            <returns>The Selenium By</returns>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions">
+            <summary>
+            Extensions methods for both IWebDriver and IWebElement
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.String)">
+            <summary>
+            Finds and waits for an element that is visible and displayed for long timeout.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Found element
+            </returns>
+            <example>How to use it: <code>
+            this.Driver.GetElement(this.loginButton);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double,System.String)">
+            <summary>
+            Finds and waits for an element that is visible and displayed at specified time.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">Specified time to wait.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Found element
+            </returns>
+            <example>How to use it: <code>
+            this.Driver.GetElement(this.loginButton, timeout);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double)">
+            <summary>
+            Finds and waits for an element that is visible and displayed at specified time.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">Specified time to wait.</param>
+            <returns>
+            Found element
+            </returns>
+            <example>How to use it: <code>
+            this.Driver.GetElement(this.loginButton, timeout);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Func{OpenQA.Selenium.IWebElement,System.Boolean},System.String)">
+            <summary>
+            Finds and waits for an element that meets specified conditions for long timeout.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="condition">Wait until condition met.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Found element
+            </returns>
+            <example>How to use it: <code>
+            this.Driver.GetElement(this.loginButton, e =&gt; e.Displayed);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double,System.Func{OpenQA.Selenium.IWebElement,System.Boolean},System.String)">
+            <summary>
+            Finds and waits for an element that meets specified conditions at specified time.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="condition">The condition to be met.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Return found element
+            </returns>
+            <example>How to use it: <code>
+            this.Driver.GetElement(this.loginButton, timeout, e =&gt; e.Displayed);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double,System.Double,System.Func{OpenQA.Selenium.IWebElement,System.Boolean},System.String)">
+            <summary>
+            Finds and waits for an element that meets specified conditions at specified time, recheck condition at specific time interval.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="timeInterval">The value indicating how often to check for the condition to be true..</param>
+            <param name="condition">The condition to be met.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Return found element
+            </returns>
+            <example>How to use it: <code>
+            this.Driver.GetElement(this.loginButton, timeout, timeInterval, e =&gt; e.Displayed &amp; e.Enabled);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement``1(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.String)">
+            <summary>
+            Finds and waits for an element that is visible and displayed for long timeout.
+            </summary>
+            <typeparam name="T">IWebComponent like ICheckbox, ISelect, etc.</typeparam>
+            <param name="searchContext">The search context.</param>
+            <param name="locator">The locator.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Located and displayed element
+            </returns>
+            <example>How to specify element type to get additional actions for it: <code>
+            var checkbox = this.Driver.GetElement&lt;Checkbox&gt;(this.stackOverFlowCheckbox);
+            checkbox.TickCheckbox();
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement``1(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double)">
+            <summary>
+            Finds and waits for an element that is visible and displayed at specified time.
+            </summary>
+            <typeparam name="T">IWebComponent like ICheckbox, ISelect, etc.</typeparam>
+            <param name="searchContext">The search context.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">Specified time to wait.</param>
+            <returns>
+            Located and displayed element
+            </returns>
+            <example>How to specify element type to get additional actions for it: <code>
+            var checkbox = this.Driver.GetElement&lt;Checkbox&gt;(this.stackOverFlowCheckbox, timeout);
+            checkbox.TickCheckbox();
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement``1(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Func{OpenQA.Selenium.IWebElement,System.Boolean},System.String)">
+            <summary>
+            Finds and waits for an element that meets specified conditions for long timeout.
+            </summary>
+            <typeparam name="T">IWebComponent like ICheckbox, ISelect, etc.</typeparam>
+            <param name="searchContext">The search context.</param>
+            <param name="locator">The locator.</param>
+            <param name="condition">The condition to be met.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Located and displayed element
+            </returns>
+            <example>How to find hidden element, specify element type to get additional actions for it and specify condition : <code>
+            var checkbox = this.Driver.GetElement&lt;Checkbox&gt;(this.stackOverFlowCheckbox, e =&gt; e.Displayed == false);
+            checkbox.TickCheckbox();
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElement``1(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double,System.Func{OpenQA.Selenium.IWebElement,System.Boolean},System.String)">
+            <summary>
+            Finds and waits for an element that meets specified conditions at specified time.
+            </summary>
+            <typeparam name="T">IWebComponent like ICheckbox, ISelect, etc.</typeparam>
+            <param name="searchContext">The search context.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">Specified time to wait.</param>
+            <param name="condition">The condition to be met.</param>
+            <param name="customMessage">Custom message to be displayed when there is no possible to get element</param>
+            <returns>
+            Located and displayed element
+            </returns>
+            <example>How to specify element type to get additional actions for it and specify time and condition to find this element: <code>
+            var checkbox = this.Driver.GetElement&lt;Checkbox&gt;(this.stackOverFlowCheckbox, timeout, e =&gt; e.Displayed);
+            checkbox.TickCheckbox();
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElements(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator)">
+            <summary>
+            Finds elements that are enabled and displayed.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <returns>
+            Return all found and displayed and enabled elements
+            </returns>
+            <example>How to find elements : <code>
+            var checkboxes = this.Driver.GetElements(this.stackOverFlowCheckbox);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElements(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double,System.Func{OpenQA.Selenium.IWebElement,System.Boolean},System.Int32)">
+            <summary>
+            Finds and waits for given timeout for at least minimum number of elements that meet specified conditions.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">Specified time to wait.</param>
+            <param name="condition">Condition to be fulfilled by elements</param>
+            <param name="minNumberOfElements">The minimum number of elements to get</param>
+            <returns>
+            Return all found and displayed and enabled elements
+            </returns>
+            <example>How to find elements : <code>
+            var checkboxes = this.Driver.GetElements(this.stackOverFlowCheckbox, timeout, e =&gt; e.Displayed &amp;&amp; e.Enabled, 1);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElements(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Int32)">
+            <summary>
+            Finds and waits for LongTimeout timeout for at least minimum number of elements that are enabled and displayed.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="minNumberOfElements">The minimum number of elements to get</param>
+            <returns>
+            Return all found and displayed and enabled elements
+            </returns>
+            <example>How to find elements : <code>
+            var checkboxes = this.Driver.GetElements(this.stackOverFlowCheckbox, 1);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElements(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Func{OpenQA.Selenium.IWebElement,System.Boolean})">
+            <summary>
+            Finds elements that meet specified conditions.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="locator">The locator.</param>
+            <param name="condition">Condition to be fulfilled by elements</param>
+            <returns>
+            Return all found elements for specified conditions
+            </returns>
+            <example>How to find disabled elements : <code>
+            var checkboxes = this.Driver.GetElements(this.stackOverFlowCheckbox, e =&gt; e.Enabled == false);
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElements``1(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator)">
+            <summary>
+            Finds elements that are visible and displayed.
+            </summary>
+            <typeparam name="T">IWebComponent like ICheckbox, ISelect, etc.</typeparam>
+            <param name="searchContext">The search context.</param>
+            <param name="locator">The locator.</param>
+            <returns>
+            Located elements
+            </returns>
+            <example>How to find elements and specify element type to get additional actions for them : <code>
+            var checkboxes = this.Driver.GetElements&lt;Checkbox&gt;(this.stackOverFlowCheckbox);
+            checkboxes[0].TickCheckbox();
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.GetElements``1(OpenQA.Selenium.ISearchContext,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Func{OpenQA.Selenium.IWebElement,System.Boolean})">
+            <summary>
+            Finds elements that meet specified conditions.
+            </summary>
+            <typeparam name="T">IWebComponent like Checkbox, Select, etc.</typeparam>
+            <param name="searchContext">The search context.</param>
+            <param name="locator">The locator.</param>
+            <param name="condition">The condition to be met.</param>
+            <returns>
+            Located elements
+            </returns>
+            <example>How to find displayed elements and specify element type to get additional actions for them : <code>
+            var checkboxes = this.Driver.GetElements&lt;Checkbox&gt;(this.stackOverFlowCheckbox, e =&gt; e.Displayed);
+            checkboxes[0].TickCheckbox();
+            </code></example>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.ToDriver(OpenQA.Selenium.ISearchContext)">
+            <summary>
+            To the driver.
+            </summary>
+            <param name="webElement">The web element.</param>
+            <returns>
+            Driver from element
+            </returns>
+            <exception cref="T:System.ArgumentException">Element must wrap a web driver</exception>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.SearchContextExtensions.As``1(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Converts generic IWebElement into specified web element (Checkbox, Table, etc.) .
+            </summary>
+            <typeparam name="T">Specified web element class</typeparam>
+            <param name="webElement">Generic IWebElement.</param>
+            <returns>
+            Specified web element (Checkbox, Table, etc.)
+            </returns>
+            <exception cref="T:System.ArgumentNullException">When constructor is null.</exception>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Extensions.WebElementExtensions">
+            <summary>
+            Extension methods for IWebElement
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebElementExtensions.IsElementTextEqualsToExpected(OpenQA.Selenium.IWebElement,System.String)">
+            <summary>
+            Verify if actual element text equals to expected.
+            </summary>
+            <param name="webElement">The web element.</param>
+            <param name="text">The text.</param>
+            <returns>
+            The <see cref="T:System.Boolean" />.
+            </returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebElementExtensions.SetAttribute(OpenQA.Selenium.IWebElement,System.String,System.String)">
+            <summary>
+            Set element attribute using java script.
+            </summary>
+            <example>Sample code to check page title: <code>
+            this.Driver.SetAttribute(this.username, "attr", "10");
+            </code></example>
+            <param name="webElement">The web element.</param>
+            <param name="attribute">The attribute.</param>
+            <param name="attributeValue">The attribute value.</param>
+            <exception cref="T:System.ArgumentException">Element must wrap a web driver
+            or
+            Element must wrap a web driver that supports java script execution</exception>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebElementExtensions.JavaScriptClick(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Click on element using java script.
+            </summary>
+            <param name="webElement">The web element.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebElementExtensions.GetTextContent(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Returns the textual content of the specified node, and all its descendants regardless element is visible or not.
+            </summary>
+            <param name="webElement">The web element</param>
+            <returns>The attribute</returns>
+            <exception cref="T:System.ArgumentException">Element must wrap a web driver
+            or
+            Element must wrap a web driver that supports java script execution</exception>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions">
+            <summary>
+            Extension methods for IWebDriver
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.JavaScriptAlert(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Handler for simple use JavaScriptAlert.
+            </summary>
+            <example>Sample confirmation for java script alert: <code>
+            this.Driver.JavaScriptAlert().ConfirmJavaScriptAlert();
+            </code></example>
+            <param name="webDriver">The web driver.</param>
+            <returns>JavaScriptAlert Handle</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.NavigateTo(OpenQA.Selenium.IWebDriver,System.Uri)">
+            <summary>
+            Navigates to.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.WaitForAjax(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Waits for all ajax actions to be completed.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.WaitForAjax(OpenQA.Selenium.IWebDriver,System.Double)">
+            <summary>
+            Waits for all ajax actions to be completed.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.IsElementPresent(OpenQA.Selenium.IWebDriver,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double)">
+            <summary>
+            Wait for element to be displayed for specified time
+            </summary>
+            <example>Example code to wait for login Button: <code>
+            this.Driver.IsElementPresent(this.loginButton, BaseConfiguration.ShortTimeout);
+            </code></example>
+            <param name="webDriver">The web driver.</param>
+            <param name="locator">The locator.</param>
+            <param name="customTimeout">The timeout.</param>
+            <returns>
+            The <see cref="T:System.Boolean" />.
+            </returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.IsPageTitle(OpenQA.Selenium.IWebDriver,System.String,System.Double)">
+            <summary>
+            Determines whether [is page title] equals [the specified page title].
+            </summary>
+            <example>Sample code to check page title: <code>
+            this.Driver.IsPageTitle(expectedPageTitle, BaseConfiguration.MediumTimeout);
+            </code></example>
+            <param name="webDriver">The web driver.</param>
+            <param name="pageTitle">The page title.</param>
+            <param name="timeout">The timeout.</param>
+            <returns>
+            Returns title of page
+            </returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.WaitUntilElementIsNoLongerFound(OpenQA.Selenium.IWebDriver,Objectivity.Test.Automation.Common.Types.ElementLocator,System.Double)">
+            <summary>
+            Waits the until element is no longer found.
+            </summary>
+            <example>Sample code to check page title: <code>
+            this.Driver.WaitUntilElementIsNoLongerFound(dissapearingInfo, BaseConfiguration.ShortTimeout);
+            </code></example>
+            <param name="webDriver">The web driver.</param>
+            <param name="locator">The locator.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.SwitchToWindowUsingUrl(OpenQA.Selenium.IWebDriver,System.Uri,System.Double)">
+            <summary>
+            Switch to existing window using url.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+            <param name="url">The url.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.ScrollIntoMiddle(OpenQA.Selenium.IWebDriver,Objectivity.Test.Automation.Common.Types.ElementLocator)">
+            <summary>
+            The scroll into middle.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+            <param name="locator">The locator.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.Actions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Selenium Actions.
+            </summary>
+            <example>Simple use of Actions: <code>
+            this.Driver.Actions().SendKeys(Keys.Return).Perform();
+            </code></example>
+            <param name="webDriver">The web driver.</param>
+            <returns>Return new Action handle</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.PageSourceContainsCase(OpenQA.Selenium.IWebDriver,System.String,System.Double,System.Boolean)">
+            <summary>Checks that page source contains text for specified time.</summary>
+            <param name="webDriver">The web webDriver.</param>
+            <param name="text">The text.</param>
+            <param name="timeoutInSeconds">The timeout in seconds.</param>
+            <param name="isCaseSensitive">True if this object is case sensitive.</param>
+            <returns>true if it succeeds, false if it fails.</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.JavaScripts(OpenQA.Selenium.IWebDriver)">
+            <summary>Easy use for java scripts.</summary>
+            <example>Sample use of java scripts: <code>
+            this.Driver.JavaScripts().ExecuteScript("return document.getElementById("demo").innerHTML");
+            </code></example>
+            <param name="webDriver">The webDriver to act on.</param>
+            <returns>An IJavaScriptExecutor Handle.</returns>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.WaitForAngular(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Waits for all angular actions to be completed.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.WaitForAngular(OpenQA.Selenium.IWebDriver,System.Double)">
+            <summary>
+            Waits for all angular actions to be completed.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.SynchronizeWithAngular(OpenQA.Selenium.IWebDriver,System.Boolean)">
+            <summary>
+            Enable synchronization with angular.
+            </summary>
+            <param name="webDriver">The WebDriver.</param>
+            <param name="enable">Enable or disable synchronization.</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.DragAndDropJs(OpenQA.Selenium.IWebDriver,OpenQA.Selenium.IWebElement,OpenQA.Selenium.IWebElement)">
+            <summary>
+            Javascript drag and drop function.
+            </summary>
+            <param name="webDriver">The WebDriver</param>
+            <param name="source">Source element</param>
+            <param name="destination">Destination element</param>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Extensions.WebDriverExtensions.ApproveCertificateForInternetExplorer(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Approves the trust certificate for internet explorer.
+            </summary>
+            <param name="webDriver">The web driver.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Types.ErrorDetail">
+            <summary>
+            Class that helps to define Kind and value for html elements.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Types.ErrorDetail.#ctor(OpenQA.Selenium.Screenshot,System.DateTime,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Types.ErrorDetail" /> class.
+            </summary>
+            <param name="screenshot">The screenshot.</param>
+            <param name="dateTime">The date time.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.ErrorDetail.Screenshot">
+            <summary>
+            Gets or sets the screenshot.
+            </summary>
+            <value>
+            The screenshot.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.ErrorDetail.DateTime">
+            <summary>
+            Gets or sets the date time.
+            </summary>
+            <value>
+            The date time.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.ErrorDetail.Exception">
+            <summary>
+            Gets or sets the exception.
+            </summary>
+            <value>
+            The exception.
+            </value>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Types.AverageGroupedTimes">
+            <summary>
+            AverageGroupedTimes class.
+            </summary>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.AverageGroupedTimes.StepName">
+            <summary>
+            Gets or sets the name of the scenario.
+            </summary>
+            <value>
+            The name of the scenario.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.AverageGroupedTimes.Browser">
+            <summary>
+            Gets or sets the Driver.
+            </summary>
+            <value>
+            The Driver.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.AverageGroupedTimes.AverageDuration">
+            <summary>
+            Gets or sets the average duration.
+            </summary>
+            <value>
+            The average duration.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.AverageGroupedTimes.Percentile90">
+            <summary>
+            Gets or sets the average duration.
+            </summary>
+            <value>
+            The average duration.
+            </value>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Types.ElementLocator">
+            <summary>
+            Class that helps to define Kind and value for html elements.
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Types.ElementLocator.#ctor(Objectivity.Test.Automation.Common.Locator,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Types.ElementLocator"/> class.
+            </summary>
+            <example>How we define locator: <code>
+            private readonly ElementLocator searchTextbox = new ElementLocator(Locator.Id, "SearchTextBoxId");
+            </code> </example>
+            <param name="kind">The locator type.</param>
+            <param name="value">The locator value.</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.ElementLocator.Kind">
+            <summary>
+            Gets or sets the kind of element locator.
+            </summary>
+            <value>
+            Kind of element locator (Id, Xpath, ...).
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.ElementLocator.Value">
+            <summary>
+            Gets or sets the element locator value.
+            </summary>
+            <value>
+            The the element locator value.
+            </value>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Types.ElementLocator.Format(System.Object[])">
+            <summary>
+            Formats the generic element locator definition and create the instance
+            </summary>
+            <param name="parameters">The parameters.</param>
+            <returns>
+            New element locator with value changed by injected parameters
+            </returns>
+            <example>How we can replace parts of defined locator: <code>
+            private readonly ElementLocator menuLink = new ElementLocator(Locator.XPath, "//*[@title='{0}' and @ms.title='{1}']");
+            var element = this.Driver.GetElement(this.menuLink.Format("info","news"));
+            </code></example>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Types.SavedTimes">
+            <summary>
+            SavedTimes class.
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Types.SavedTimes.scenario">
+            <summary>
+            The scenario
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Types.SavedTimes.browserName">
+            <summary>
+            The browser name
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Types.SavedTimes.duration">
+            <summary>
+            The duration
+            </summary>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Types.SavedTimes.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Objectivity.Test.Automation.Common.Types.SavedTimes" /> class.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.SavedTimes.Scenario">
+            <summary>
+            Gets the scenario.
+            </summary>
+            <value>
+            The scenario.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.SavedTimes.BrowserName">
+            <summary>
+            Gets the name of the Driver.
+            </summary>
+            <value>
+            The name of the Driver.
+            </value>
+        </member>
+        <member name="P:Objectivity.Test.Automation.Common.Types.SavedTimes.Duration">
+            <summary>
+            Gets the duration.
+            </summary>
+            <value>
+            The duration.
+            </value>
+        </member>
+        <member name="M:Objectivity.Test.Automation.Common.Types.SavedTimes.SetDuration(System.Int64)">
+            <summary>
+            Sets the duration.
+            </summary>
+            <param name="loadTime">The load time.</param>
+        </member>
+        <member name="T:Objectivity.Test.Automation.Common.Locator">
+            <summary>
+            The page element locator type. Needs to be translated to automation framework specific locators
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.Id">
+            <summary>
+            The Id selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.ClassName">
+            <summary>
+            The class name selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.CssSelector">
+            <summary>
+            The CSS selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.LinkText">
+            <summary>
+            The link text selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.Name">
+            <summary>
+            The name selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.PartialLinkText">
+            <summary>
+            The partial link text selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.TagName">
+            <summary>
+            The tag name selector
+            </summary>
+        </member>
+        <member name="F:Objectivity.Test.Automation.Common.Locator.XPath">
+            <summary>
+            The XPath selector
+            </summary>
+        </member>
+    </members>
+</doc>

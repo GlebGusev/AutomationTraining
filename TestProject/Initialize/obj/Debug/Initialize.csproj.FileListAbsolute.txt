@@ -19,3 +19,17 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\N
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\System.ValueTuple.dll
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Newtonsoft.Json.xml
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\System.ValueTuple.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Microsoft.AnalysisServices.AdomdClient.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NLog.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NPOI.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NPOI.OOXML.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Objectivity.Test.Automation.Common.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\WebDriver.Support.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NLog.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\NPOI.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\Objectivity.Test.Automation.Common.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Initialize\bin\Debug\WebDriver.Support.xml

@@ -3,8 +3,6 @@ using System.Text.RegularExpressions;
 using Allure.NUnit.Attributes;
 using Initialize;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 
 namespace Task_50.Tests
 {
@@ -18,12 +16,13 @@ namespace Task_50.Tests
         private Uri _startPageFrame = new Uri("https://the-internet.herokuapp.com/iframe");
         private readonly string[] _textToEnter = {"Hello ","World!"};
 
-        [SetUp]
-        public override void TestSetup()
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
         {
-            base.TestSetup();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            base.OneTimeSetUp();
+            //new AssemblyConfiguration().UpdateAllureConfig();
             _locators = new Locators.HerokuappLocators();
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         }
 
         [Test]
@@ -35,7 +34,7 @@ namespace Task_50.Tests
         public void Herokuapp_AddTextToFrame_Added()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPageFrame);
+            LaunchBrowser(_startPageFrame);
 
             //FInd Frame and clear
             var frameWindow = Driver.FindElement(_locators.frameWindow);
@@ -73,10 +72,10 @@ namespace Task_50.Tests
         public void Herokuapp_Alert_Added()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPageAlert);
+            LaunchBrowser(_startPageAlert);
 
             //Accept Alert
-            _locators.WaitForElementDisplayed(Driver, _locators.clickForJSAlertButton);
+            _locators.WaitForElementDisplayed(_locators.clickForJSAlertButton);
             Driver.FindElement(_locators.clickForJSAlertButton).Click();
             Driver.SwitchTo().Alert().Accept();
 
@@ -92,10 +91,10 @@ namespace Task_50.Tests
         public void Herokuapp_Confirm_Added()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPageAlert);
+            LaunchBrowser(_startPageAlert);
 
             //Cancel Confirm
-            _locators.WaitForElementDisplayed(Driver, _locators.clickForJSConfirmButton);
+            _locators.WaitForElementDisplayed(_locators.clickForJSConfirmButton);
             var confirmButton = Driver.FindElement(_locators.clickForJSConfirmButton);
             confirmButton.Click();
             Driver.SwitchTo().Alert().Dismiss();
@@ -118,10 +117,10 @@ namespace Task_50.Tests
         public void Herokuapp_Prompt_Added()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPageAlert);
+            LaunchBrowser(_startPageAlert);
 
             //Cancel Prompt
-            _locators.WaitForElementDisplayed(Driver, _locators.clickForJSPromptButton);
+            _locators.WaitForElementDisplayed(_locators.clickForJSPromptButton);
             var promptButton = Driver.FindElement(_locators.clickForJSPromptButton);
             promptButton.Click();
             Driver.SwitchTo().Alert().Dismiss();

@@ -15,10 +15,11 @@ namespace Task_20.Tests
         private readonly string _username = "seleniumtests@tut.by";
         private readonly string _password = "123456789zxcvbn";
 
-        [SetUp]
-        public override void TestSetup()
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
         {
-            base.TestSetup();
+            base.OneTimeSetUp();
+            //new AssemblyConfiguration().UpdateAllureConfig();
             _locators = new Locators.Locators();
         }
 
@@ -31,7 +32,7 @@ namespace Task_20.Tests
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(_startPage);
 
             //Enter credentials
             Driver.FindElement(_locators.enterLink).Click();

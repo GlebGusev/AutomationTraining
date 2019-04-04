@@ -32,3 +32,15 @@ C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Init
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Newtonsoft.Json.xml
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\System.ValueTuple.xml
 C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\allureConfig.json
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Objectivity.Test.Automation.Common.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NLog.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NPOI.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NPOI.OOXML.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Microsoft.AnalysisServices.AdomdClient.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\Objectivity.Test.Automation.Common.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NLog.xml
+C:\Users\GlebGusev\Desktop\AutomationTraining\TestProject\Task_50\bin\Debug\NPOI.xml

@@ -16,13 +16,15 @@ namespace Task_70.Tests
         private readonly string _username = "seleniumtests@tut.by";
         private readonly string _password = "123456789zxcvbn";
 
-        [SetUp]
-        public override void TestSetup()
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
         {
-            base.TestSetup();
+            base.OneTimeSetUp();
+            //new AssemblyConfiguration().UpdateAllureConfig();
             _locators = PageFactory.InitElements<Locators.PageFactory>(Driver);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         }
-
+        
         [Test]
         [AllureTest]
         [AllureSubSuite("LoginTutBy")]
@@ -34,15 +36,13 @@ namespace Task_70.Tests
             var username = "seleniumtests444@tut.by";
 
             //Open start page
-            LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(_startPage);
 
             //Enter credentials
             _locators.PerformAutorization(username, _password);
 
             //Validate user logged in
             _locators.AssertLoggedIn();
-
-            Driver.Quit();
         }
 
         [Test]
@@ -54,8 +54,6 @@ namespace Task_70.Tests
         public void LoginTutBy_CorrectCredentials_Successfull()
         {
             LoginToAccount();
-
-            Driver.Quit();
         }
 
         [Test]
@@ -74,14 +72,12 @@ namespace Task_70.Tests
 
             //Validate user logged out
             _locators.AssertLoggedOut();
-
-            Driver.Quit();
         }
 
         private void LoginToAccount()
         {
             //Open start page
-            LaunchBrowser(Driver, _startPage);
+            LaunchBrowser(_startPage);
 
             //Enter credentials
             _locators.PerformAutorization(_username, _password);
